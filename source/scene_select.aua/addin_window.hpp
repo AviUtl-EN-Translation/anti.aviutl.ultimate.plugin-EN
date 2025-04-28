@@ -525,7 +525,7 @@ namespace apn::scene_select
 							if (is_available(drag_button) && drag_button != magi.exin.get_current_scene_index())
 							{
 								// ボタンが押されたのでシーンを変更します。
-								magi.exin.set_scene(drag_button, magi.auin.get_filter_plugin(magi.fp, "拡張編集"), magi.exin.get_editp());
+								magi.exin.set_scene(drag_button, magi.auin.get_filter_plugin(magi.fp, "Advanced Editing"), magi.exin.get_editp());
 
 								// AviUtlのプレビューウィンドウを再描画します。
 								magi.redraw();

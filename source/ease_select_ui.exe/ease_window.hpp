@@ -395,7 +395,7 @@ namespace apn::ease_select_ui
 
 			{
 				CRect rc; GetClientRect(&rc);
-				auto text = L"✖を押すと適用されます↑";
+				auto text = L"Press ✖ to apply ↑";
 				Gdiplus::FontFamily font_family(L"メイリオ");
 				Gdiplus::Font font(&font_family, 12, FontStyleBold, UnitPoint);
 				Gdiplus::SolidBrush brush(border_color);

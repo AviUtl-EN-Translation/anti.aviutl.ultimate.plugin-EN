@@ -35,19 +35,19 @@ namespace apn::filter_copy
 				if (i == 2)
 				{
 					::AppendMenu(sub_menu, MF_SEPARATOR, 0, nullptr);
-					::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_create_clone, _T("完全な複製を下に作成"));
-					::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_create_same_above, _T("同じフィルタ効果を上に作成"));
-					::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_create_same_below, _T("同じフィルタ効果を下に作成"));
+					::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_create_clone, _T("Create a full duplicate below"));
+					::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_create_same_above, _T("Create the same filter effect above"));
+					::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_create_same_below, _T("Create the same filter effect below"));
 				}
 
 				::AppendMenu(sub_menu, MF_SEPARATOR, 0, nullptr);
-				::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_cut_filter, _T("このフィルタを切り取り"));
-				::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_cut_filter_above, _T("このフィルタ以上を切り取り"));
-				::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_cut_filter_below, _T("このフィルタ以下を切り取り"));
-				::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_copy_filter, _T("このフィルタをコピー"));
-				::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_copy_filter_above, _T("このフィルタ以上をコピー"));
-				::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_copy_filter_below, _T("このフィルタ以下をコピー"));
-				::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_paste_filter, _T("フィルタを貼り付け"));
+				::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_cut_filter, _T("Cut this filter"));
+				::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_cut_filter_above, _T("Cut filters above this"));
+				::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_cut_filter_below, _T("Cut filters below this"));
+				::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_copy_filter, _T("Copy this filter"));
+				::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_copy_filter_above, _T("Copy filters above this"));
+				::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_copy_filter_below, _T("Copy filters below this"));
+				::AppendMenu(sub_menu, MF_STRING, magi.c_command_id.c_setting_dialog.c_paste_filter, _T("Paste filter"));
 			}
 
 			return DetourTransactionCommit() == NO_ERROR;

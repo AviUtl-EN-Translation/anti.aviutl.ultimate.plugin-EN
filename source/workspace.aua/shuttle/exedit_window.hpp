@@ -38,7 +38,7 @@ namespace apn::workspace
 				dummy.create(
 					WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_TOOLWINDOW,
 					_T("AviUtl"),
-					_T("拡張編集"),
+					_T("Advanced Editing"),
 					WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN,
 					0, 0, 0, 0,
 					hive.main_window, nullptr, wc.hInstance, nullptr);

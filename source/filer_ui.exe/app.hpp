@@ -64,7 +64,7 @@ namespace apn::filer_ui
 
 			if (!AfxOleInit())
 			{
-				AfxMessageBox(_T("AfxOleInit()が失敗しました"));
+				AfxMessageBox(_T("AfxOleInit() failed"));
 
 				return FALSE;
 			}
@@ -77,7 +77,7 @@ namespace apn::filer_ui
 			// コンフィグ入出力を初期化します。
 			if (!config_io.init())
 			{
-				AfxMessageBox(_T("コンフィグ入出力の初期化に失敗しました"));
+				AfxMessageBox(_T("Failed to initialize config input/output"));
 
 				return FALSE;
 			}
@@ -85,14 +85,14 @@ namespace apn::filer_ui
 			// クライアントウィンドウを初期化します。
 			if (!client_window.init(hive.host_window))
 			{
-				AfxMessageBox(_T("クライアントウィンドウの作成に失敗しました"));
+				AfxMessageBox(_T("Failed to create client window"));
 
 				return FALSE;
 			}
 
 			// ダークモード化モジュールを初期化します。
 			if (!dark.init(hive.host_window, client_window))
-				MY_TRACE("ダークモード化に失敗しました\n");
+				MY_TRACE("Dark Mode Failed");
 
 			if (0) // テストコード
 			{

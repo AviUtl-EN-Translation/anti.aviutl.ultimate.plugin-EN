@@ -206,15 +206,15 @@ namespace apn::clipboard_viewer
 		{
 			my::menu::unique_ptr<> menu(::CreatePopupMenu());
 
-			::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_backward, L"戻る");
-			::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_forward, L"進む");
+			::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_backward, L"Prev");
+			::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_forward, L"Next");
 			::AppendMenuW(menu.get(), MF_SEPARATOR, 0, nullptr);
-			::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_zoom_in, L"拡大");
-			::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_zoom_out, L"縮小");
-			::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_zoom_reset, L"拡大率をリセット");
+			::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_zoom_in, L"Zoom in");
+			::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_zoom_out, L"Zoom out");
+			::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_zoom_reset, L"Zoom to 100%");
 			::AppendMenuW(menu.get(), MF_SEPARATOR, 0, nullptr);
-			::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_erase_current_bitmap, L"現在の画像を削除");
-			::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_clear_all_bitmaps, L"すべての画像を削除");
+			::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_erase_current_bitmap, L"Delete current image");
+			::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_clear_all_bitmaps, L"Delete all images");
 
 			if (current_bitmap_index <= 0)
 				::EnableMenuItem(menu.get(), c_command_id.c_backward, MF_DISABLED);

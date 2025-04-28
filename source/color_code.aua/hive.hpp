@@ -8,7 +8,7 @@ namespace apn::color_code
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"color_code";
-		inline static constexpr auto c_display_name = L"カラーコード追加";
+		inline static constexpr auto c_display_name = L"Color Code";
 
 		//
 		// このアドインのインスタンスハンドルです。

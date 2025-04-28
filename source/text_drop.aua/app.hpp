@@ -436,7 +436,7 @@ namespace apn::text_drop
 			// exoファイルを作成します。
 			write_exo(mode, exo_path);
 #if 1
-			auto fp = magi.auin.get_filter_plugin(magi.fp, "拡張編集");
+			auto fp = magi.auin.get_filter_plugin(magi.fp, "Advanced Editing");
 #else
 			auto exedit = magi.exin.get_exedit();
 			auto fp = *(AviUtl::FilterPlugin**)(exedit + 0x0014D4B4);

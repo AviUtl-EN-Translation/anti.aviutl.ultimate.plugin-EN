@@ -107,7 +107,7 @@ namespace apn::settings_browser
 					{ "i5", ef->i5 },
 					{ "type", ef->type },
 					{ "mode", ef->mode },
-					{ "res_w", ef->res_w },
+					{ "res_w", ef->res_W },
 					{ "res_h", ef->res_h },
 					{ "space_x", ef->space_x },
 					{ "space_y", ef->space_y },

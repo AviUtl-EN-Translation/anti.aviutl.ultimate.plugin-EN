@@ -11,11 +11,11 @@
 
 namespace apn::dirty_check
 {
-	inline constexpr auto FILTER_NAME = "終了確認";
+	inline constexpr auto FILTER_NAME = "Dirty Check";
 	inline constexpr auto FILTER_INFORMATION = "Auls終了確認 v1.2 forked by karoterra";
 
-	inline constexpr auto EXEDIT_NAME = "拡張編集";
-	inline constexpr auto EXEDIT_92 = "拡張編集(exedit) version 0.92 by ＫＥＮくん";
+	inline constexpr auto EXEDIT_NAME = "Advanced Editing";
+	inline constexpr auto EXEDIT_92 = "Adv. Editing(exedit) version 0.92 by Mr. Ken";
 
 	inline struct DirtyFlag
 	{
@@ -59,7 +59,7 @@ namespace apn::dirty_check
 			}
 			else
 			{
-				::MessageBoxA(fp->hwnd, "対応する拡張編集が見つかりません。", FILTER_NAME, MB_OK | MB_ICONERROR);
+				::MessageBoxA(fp->hwnd, "No corresponding exedits found.", FILTER_NAME, MB_OK | MB_ICONERROR);
 
 				return FALSE;
 			}
@@ -136,7 +136,7 @@ namespace apn::dirty_check
 			if (dirty_flag.is_trigger_message(message, wParam))
 			{
 				// メッセージボックスを表示します。
-				auto id = ::MessageBoxA(hwnd, "変更された編集データがあります。保存しますか？",
+				auto id = ::MessageBoxA(hwnd, "You have modified edit data. Do you want to save it?",
 					FILTER_NAME, MB_YESNOCANCEL | MB_ICONQUESTION | MB_DEFBUTTON1);
 
 				// ユーザーが「はい」を選択した場合は

@@ -110,7 +110,7 @@ namespace apn::image_export
 			if (!fp || !editp) throw L"必要な変数を取得できませんでした";
 			if (!fp->exfunc->is_editing(editp)) throw L"編集中で画像を読み取ることができませんでした";
 
-			auto exedit = magi.auin.get_filter_plugin(fp, "拡張編集");
+			auto exedit = magi.auin.get_filter_plugin(fp, "Advanced Editing");
 			if (!exedit) throw L"拡張編集を取得できませんでした";
 
 			// フレーム番号を取得します。

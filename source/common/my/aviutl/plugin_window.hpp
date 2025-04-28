@@ -42,7 +42,7 @@ namespace my::aviutl
 		}
 
 		//
-		// ウィンドウの表示/非表示を切り替えます。
+		// Toggles the display or hiding of the window.
 		//
 		void show() { return plugin_window_extension->show(*this); }
 

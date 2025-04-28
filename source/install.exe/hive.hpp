@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 //
-// このクラスは他クラスから共通して使用される変数を保持します。
+// This class maintains variables that are commonly used by other classes.
 //
 inline struct Hive
 {

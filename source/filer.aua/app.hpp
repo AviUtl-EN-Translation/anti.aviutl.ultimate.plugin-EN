@@ -38,7 +38,7 @@ namespace apn::filer
 			// アドインウィンドウを初期化します。
 			if (!addin_window.init())
 			{
-				hive.message_box(L"アドインウィンドウの初期化に失敗しました");
+				hive.message_box(L"Add-in window initialization failed");
 				return FALSE;
 			}
 
@@ -52,14 +52,14 @@ namespace apn::filer
 			// フックを初期化します。
 			if (!hook_manager.init())
 			{
-				hive.message_box(L"フックの初期化に失敗しました");
+				hive.message_box(L"Failed to initialize hook");
 				return FALSE;
 			}
 
 			// クライアントプロセスを初期化します。
 			if (!gui.init(hive.addin_window))
 			{
-				hive.message_box(L"クライアントプロセスの初期化に失敗しました");
+				hive.message_box(L"Clients process initialization failed");
 				return FALSE;
 			}
 
@@ -185,8 +185,8 @@ namespace apn::filer
 
 			// メッセージテキストを構築します。
 			auto text = std::format(
-				_T("ファイラ「{}」を削除しますか？") _T("\n")
-				_T("※ファイラを削除するとファイラに登録してあるブックマークも一緒に削除されます"), name);
+				_T("Do you want to delete the filer 「{}」?") _T("\n")
+				_T("※If you delete a filer, the bookmarks registered in the filer will also be deleted."), name);
 			MY_TRACE_STR(text);
 
 			// メッセージボックスを出してユーザーに確認してもらいます。
@@ -305,7 +305,7 @@ namespace apn::filer
 				if (!is_available_name(new_name))
 				{
 					// メッセージボックスを表示します。
-					hive.message_box(L"名前が重複しています", *this, MB_OK | MB_ICONWARNING);
+					hive.message_box(L"This name is duplicated", *this, MB_OK | MB_ICONWARNING);
 
 					return;
 				}

@@ -49,7 +49,7 @@ namespace apn
 
 				if (::StrStrIW(file_name.c_str(), L"exedit.auf"))
 				{
-					MY_TRACE("拡張編集が読み込まれたのでアドレスを取得します\n");
+					MY_TRACE("が読み込まれたのでアドレスを取得します\n");
 
 					// 拡張編集関連のアドレス情報を初期化します。
 					magi.exin.init();

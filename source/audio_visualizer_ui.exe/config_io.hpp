@@ -8,8 +8,8 @@ namespace apn::audio_visualizer::ui
 	inline struct ConfigIO : StdConfigIOUseHive<hive>
 	{
 		//
-		// ファイルパスを読み込みます。
-		// 相対パスだった場合は絶対パスに変換します。
+		// Load the file path.
+		// If it is a relative path, convert it to an absolute path.
 		//
 		inline static void read_file_name(const n_json& node, const std::string& name,
 			std::filesystem::path& path, const std::filesystem::path& origin_path)
@@ -48,7 +48,7 @@ namespace apn::audio_visualizer::ui
 		}
 
 		//
-		// コンフィグを読み込みます。
+		// Load the configuration.
 		//
 		virtual BOOL read_node(n_json& root) override
 		{
@@ -61,7 +61,7 @@ namespace apn::audio_visualizer::ui
 			// キーはビジュアルのウィンドウ名です。
 			auto visuals = visual_manager.create_visual_map();
 
-			// ビジュアルを読み込みます。
+			// Load visuals.
 			read_child_nodes(root, "visual",
 				[&](const n_json& visual_node, size_t i)
 			{
@@ -77,7 +77,7 @@ namespace apn::audio_visualizer::ui
 				// ビジュアルを取得します。
 				auto& visual = it->second;
 
-				// スキームファイルのパスを読み込みます。
+				// Loads the path to the scheme file.
 				read_file_name(visual_node, "scheme_file_name", visual->scheme_file_name, origin_path);
 
 				// プリファレンスを取得します。

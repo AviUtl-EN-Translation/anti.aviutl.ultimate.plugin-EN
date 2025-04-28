@@ -49,7 +49,7 @@ public:
 		for (const auto& result : hive.results)
 		{
 			std::format_to(std::back_inserter(str), L"{} {} => {}" L"\r\n",
-				result.succeeded ? L"(成功)" : L"(失敗)", result.from, result.to);
+				result.succeeded ? L"(Success)" : L"(Failure)", result.from, result.to);
 		}
 
 		result.SetWindowText(str.c_str());

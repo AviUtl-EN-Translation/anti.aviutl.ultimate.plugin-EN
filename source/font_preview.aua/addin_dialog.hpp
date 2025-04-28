@@ -70,7 +70,7 @@ namespace apn::font_preview
 		{
 			MY_TRACE_FUNC("");
 
-			init_combobox(IDC_PAINT_MODE, _T("自動"), _T("システムカラー"), _T("テーマ"), _T("カスタムカラー"));
+			init_combobox(IDC_PAINT_MODE, _T("Auto"), _T("System Color"), _T("Theme"), _T("Custom Color"));
 
 			using namespace my::layout;
 

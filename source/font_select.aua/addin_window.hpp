@@ -36,7 +36,7 @@ namespace apn::font_select
 		}
 
 		//
-		// オーナードロー用の処理です。アイテムの寸法を返します。
+		//Processing for owner draw. Returns the dimension of the item.
 		//
 		BOOL on_measure_item(MEASUREITEMSTRUCT* mis)
 		{
@@ -49,7 +49,7 @@ namespace apn::font_select
 		}
 
 		//
-		// オーナードロー用の処理です。アイテムを描画します。
+		// Processing for owner draw. Draw an item.
 		//
 		BOOL on_draw_item(DRAWITEMSTRUCT* dis)
 		{
@@ -130,7 +130,7 @@ namespace apn::font_select
 
 					if (!addin_dialog.init(hwnd))
 					{
-						MY_TRACE("メインダイアログの作成に失敗しました\n");
+						MY_TRACE("Failed to create main dialog\n");
 
 						return -1;
 					}

@@ -84,7 +84,7 @@ namespace apn::ease_select_ui
 				_T(""),
 				WS_POPUP, 0, 0, 0, 0, nullptr, nullptr))
 			{
-				hive.message_box(L"メインウィンドウの作成に失敗しました");
+				hive.message_box(L"Failed to create main window");
 
 				return FALSE;
 			}

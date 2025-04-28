@@ -13,7 +13,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// 擔杮岅 (擔杮) resources
+// 老夯绢(老夯) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
 LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
@@ -56,21 +56,21 @@ EXSTYLE WS_EX_NOPARENTNOTIFY | WS_EX_CONTROLPARENT
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     LISTBOX         IDC_FILER_LIST,0,0,144,32,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
-    PUSHBUTTON      "嶌惉",IDC_CREATE_FILER,0,32,48,16
-    PUSHBUTTON      "嶍彍",IDC_DESTROY_FILER,48,32,48,16
-    PUSHBUTTON      "曇廤",IDC_EDIT_FILER,96,32,48,16
-    CONTROL         "僐儌儞僟僀傾儘僌傪巊梡偡傞",IDC_USE_COMMON_DIALOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,48,144,16
+    PUSHBUTTON      "Create",IDC_CREATE_FILER,0,32,48,16
+    PUSHBUTTON      "Delete",IDC_DESTROY_FILER,48,32,48,16
+    PUSHBUTTON      "Edit",IDC_EDIT_FILER,96,32,48,16
+    CONTROL         "Use a common dialog",IDC_USE_COMMON_DIALOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,48,144,16
 END
 
 IDD_GET_FILER_NAME DIALOGEX 0, 0, 275, 37
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "僼傽僀儔偺柤慜傪擖椡偟偰偔偩偝偄"
+CAPTION "Enter the name of file"
 FONT 8, "MS Shell Dlg", 400, 0, 0x80
 BEGIN
-    LTEXT           "怴偟偄柤慜",-1,4,4,40,12,SS_CENTERIMAGE,WS_EX_RIGHT
+    LTEXT           "New Name",-1,4,4,40,12,SS_CENTERIMAGE,WS_EX_RIGHT
     EDITTEXT        IDC_NEW_NAME,48,4,224,12,ES_AUTOHSCROLL
     DEFPUSHBUTTON   "OK",IDOK,172,20,48,12
-    PUSHBUTTON      "僉儍儞僙儖",IDCANCEL,224,20,48,12
+    PUSHBUTTON      "Cancel",IDCANCEL,224,20,48,12
 END
 
 
@@ -116,7 +116,7 @@ BEGIN
     0
 END
 
-#endif    // 擔杮岅 (擔杮) resources
+#endif    // 老夯绢(老夯) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

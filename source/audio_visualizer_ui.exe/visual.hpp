@@ -270,7 +270,7 @@ namespace apn::audio_visualizer::ui
 
 					wil::com_ptr<ICoreWebView2ContextMenuItem> select_contents_file_menu_item;
 					env->CreateContextMenuItem(
-						L"スキームを選択",
+						L"Select a Scheme",
 						nullptr,
 						COREWEBVIEW2_CONTEXT_MENU_ITEM_KIND_COMMAND,
 						&select_contents_file_menu_item);
@@ -289,7 +289,7 @@ namespace apn::audio_visualizer::ui
 
 					wil::com_ptr<ICoreWebView2ContextMenuItem> show_visual_editor_menu_item;
 					env->CreateContextMenuItem(
-						L"ビジュアルの設定",
+						L"Visual Settings",
 						nullptr,
 						COREWEBVIEW2_CONTEXT_MENU_ITEM_KIND_COMMAND,
 						&show_visual_editor_menu_item);
@@ -498,6 +498,7 @@ namespace apn::audio_visualizer::ui
 			{
 				hive.message_box(my::ws(error.what()), *this);
 
+
 				return FALSE;
 			}
 		}
@@ -518,10 +519,10 @@ namespace apn::audio_visualizer::ui
 			OPENFILENAMEW ofn = { sizeof(ofn) };
 			ofn.hwndOwner = hive.main_window;
 			ofn.Flags = OFN_FILEMUSTEXIST;
-			ofn.lpstrTitle = L"スキームを選択";
+			ofn.lpstrTitle = L"Select a Scheme";
 			ofn.lpstrFile = file_name.data();
 			ofn.nMaxFile = file_name.size();
-			ofn.lpstrFilter = L"jsonファイル (*.json)\0*.json\0" "すべてのファイル (*.*)\0*.*\0";
+			ofn.lpstrFilter = L"JSON Files (*.json)\0*.json\0All Files (*.*)\0*.*\0";
 			ofn.lpstrDefExt = L"json";
 
 			// 初期ディレクトリを設定します。

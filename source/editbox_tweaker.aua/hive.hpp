@@ -8,7 +8,7 @@ namespace apn::editbox_tweaker
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"editbox_tweaker";
-		inline static constexpr auto c_display_name = L"エディットボックス微調整";
+		inline static constexpr auto c_display_name = L"Editbox Tweaker";
 
 		//
 		// このアドインのインスタンスハンドルです。

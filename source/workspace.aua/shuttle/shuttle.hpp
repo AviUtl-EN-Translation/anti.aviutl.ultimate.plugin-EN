@@ -105,8 +105,8 @@ namespace apn::workspace
 		inline static std::wstring decorate_name(const std::wstring& name)
 		{
 			if (name == L"AviUtl" ||
-				name == L"拡張編集" ||
-				name == L"設定ダイアログ")
+				name == L"Adv.Edit" ||
+				name == L"Extended Filter")
 			{
 				return L"* " + name;
 			}
@@ -190,7 +190,7 @@ namespace apn::workspace
 			MY_TRACE_RECT2(client_rc);
 
 			// 設定ダイアログの初期位置は縦に長過ぎたりするので微調整します。
-			if (name == L"* 設定ダイアログ")
+			if (name == L"* Extended Filter")
 			{
 				client_rc.right += ::GetSystemMetrics(SM_CXSIZEFRAME) * 2;
 				client_rc.bottom /= 2;
@@ -267,8 +267,8 @@ namespace apn::workspace
 		virtual LPCWSTR get_initial_category_name()
 		{
 			if (name == L"* AviUtl" ||
-				name == L"* 拡張編集" ||
-				name == L"* 設定ダイアログ" ||
+				name == L"* Adv.edit" ||
+				name == L"* Configuration Dialog" ||
 				name == L"ぼかしフィルタ" ||
 				name == L"クリッピング＆リサイズ" ||
 				name == L"シャープフィルタ" ||

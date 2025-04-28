@@ -8,7 +8,7 @@ namespace apn::dialog_size
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"dialog_size";
-		inline static constexpr auto c_display_name = L"ダイアログサイズ調整";
+		inline static constexpr auto c_display_name = L"Dialog Size";
 
 		//
 		// このアドインのインスタンスハンドルです。

@@ -149,7 +149,7 @@ namespace apn::item_copy
 		//
 		BOOL read_file(const std::wstring& exo_file_name)
 		{
-			auto fp = magi.auin.get_filter_plugin(magi.fp, "拡張編集");
+			auto fp = magi.auin.get_filter_plugin(magi.fp, "Advanced Editing ");
 			auto editp = magi.exin.get_editp();
 			auto frame = magi.fp->exfunc->get_frame(editp);
 			auto layer = std::max(0, hive.insert_layer - 1);

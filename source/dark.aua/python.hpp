@@ -341,7 +341,7 @@ namespace apn::dark
 				scheme_module = boot_module.attr("boot_scheme_module")(scheme_module_name).cast<py::module>();
 				if (!scheme_module)
 				{
-					auto message = std::format(L"{}の読み込みに失敗しました", ws(scheme_module_name));
+					auto message = std::format(L"Failed to load {}", ws(scheme_module_name));
 
 					throw std::exception(u8(message).c_str());
 				}

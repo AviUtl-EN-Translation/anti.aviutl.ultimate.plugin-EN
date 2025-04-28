@@ -45,7 +45,7 @@ namespace apn::audio_visualizer
 			// アドインウィンドウを初期化します。
 			if (!addin_window.init())
 			{
-				hive.message_box(L"アドインウィンドウの初期化に失敗しました\n");
+				hive.message_box(L"Failed to initialize add-in window\n");
 
 				return FALSE;
 			}
@@ -53,7 +53,7 @@ namespace apn::audio_visualizer
 			// コウィンドウマネージャを初期化します。
 			if (!co_window_manager.init())
 			{
-				hive.message_box(L"コウィンドウマネージャの初期化に失敗しました\n");
+				hive.message_box(L"Failed to initialize co-window manager\n");
 
 				return FALSE;
 			}
@@ -61,7 +61,7 @@ namespace apn::audio_visualizer
 			// 外部プロセスを初期化します。
 			if (!outer.init())
 			{
-				hive.message_box(L"外部プロセスの初期化に失敗しました\n");
+				hive.message_box(L"Failed to initialize external process\n");
 
 				return FALSE;
 			}
@@ -69,7 +69,7 @@ namespace apn::audio_visualizer
 			// ワーカーを初期化します。
 			if (!worker.init())
 			{
-				hive.message_box(L"ワーカーの初期化に失敗しました\n");
+				hive.message_box(L"Failed to initialize worker\n");
 
 				return FALSE;
 			}
@@ -77,7 +77,7 @@ namespace apn::audio_visualizer
 			// コンフィグを読み込みます。
 			if (!app->read_config())
 			{
-				MY_TRACE("コンフィグの読み込みに失敗しました\n");
+				MY_TRACE("Failed to load config\n");
 			}
 
 			// 外部プロセスに初期化の完了を通知します。

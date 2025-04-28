@@ -8,7 +8,7 @@ namespace apn::clipboard_viewer
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"clipboard_viewer";
-		inline static constexpr auto c_display_name = L"クリップボード画像表示";
+		inline static constexpr auto c_display_name = L"Clipboard Viewer";
 
 		inline static constexpr struct Zoom {
 			inline static constexpr auto c_default = 100;

@@ -33,9 +33,7 @@ public:
 	// 標準コンストラクタです。
 	//
 	OptionDialog(CWnd* parent = nullptr)
-		: CDialogEx(IDD_OPTION_DIALOG, parent)
-	{
-	}
+		: CDialogEx(IDD_OPTION_DIALOG, parent){}
 
 	//
 	// デストラクタです。
@@ -47,7 +45,7 @@ public:
 	}
 
 	//
-	// 指定されたファイルのチェックサムを返します。
+	// Returns the checksum of the specified file.
 	//
 	inline static DWORD get_checksum(const std::filesystem::path& path)
 	{
@@ -63,14 +61,14 @@ public:
 	}
 
 	//
-	// 入力されたオプションを適用します。
+	// Applies the option entered.
 	//
 	BOOL apply_option()
 	{
 		try
 		{
 			constexpr DWORD c_aviutl_checksum = 0x0009690c;
-			constexpr DWORD c_exedit_checksum = 0x000d7a64;
+			constexpr DWORD c_exedit_checksum = 0x000e19d9;
 
 			hive.aviutl_dir = hive.aviutl_file_name.parent_path();
 			hive.exedit_file_name = hive.aviutl_dir / L"exedit.auf";
@@ -80,8 +78,8 @@ public:
 			if (!std::filesystem::exists(hive.aviutl_file_name))
 			{
 				AfxMessageBox(
-					_T("インストール先が無効です") _T("\n")
-					_T("aviutl.exeを選択してください"));
+					_T("Invalid destination") _T("\n")
+					_T("Select aviutl.exe"));
 
 				return FALSE;
 			}
@@ -89,8 +87,8 @@ public:
 			if (get_checksum(hive.aviutl_file_name) != c_aviutl_checksum)
 			{
 				AfxMessageBox(
-					_T("AviUtlのバージョンが無効です") _T("\n")
-					_T("『AviUtl version1.10』のaviutl.exeを選択してください"));
+					_T("Invalid AviUtl version") _T("\n")
+					_T("Select aviutl.exe for『AviUtl version1.10』"));
 
 				return FALSE;
 			}
@@ -98,8 +96,8 @@ public:
 			if (get_checksum(hive.exedit_file_name) != c_exedit_checksum)
 			{
 				AfxMessageBox(
-					_T("拡張編集のバージョンが無効です") _T("\n")
-					_T("先に『拡張編集 version0.92』をインストールしてください"));
+					_T("Invalid version of ExEdit detected") _T("\n")
+					_T("Please install 'ExEdit version 0.92' first"));
 
 				return FALSE;
 			}

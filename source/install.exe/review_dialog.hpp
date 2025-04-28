@@ -101,7 +101,7 @@ public:
 
 				auto resource = ::BeginUpdateResource(dark_to.c_str(), FALSE);
 
-				// aviutl_dark.exeを外部マニフェスト形式にします。
+				// Make aviutl_dark.exe an external manifest format.
 				::UpdateResource(
 					resource,
 					RT_MANIFEST,
@@ -117,7 +117,7 @@ public:
 			catch (const std::exception& error)
 			{
 				AfxMessageBox(std::format(
-					L"マニフェストの作成に失敗しました" L"\n"
+					L"Failed to create manifest" L"\n"
 					L"{}",
 					my::ws(error.what())).c_str());
 			}

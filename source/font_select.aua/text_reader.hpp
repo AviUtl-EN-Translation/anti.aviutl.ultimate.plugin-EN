@@ -3,14 +3,14 @@
 namespace apn::font_select
 {
 	//
-	// このクラスは旧形式のテキストファイルを読み込みます。
+	// This class reads text files in the old format.
 	//
 	struct TextReader
 	{
 		const std::vector<std::wstring> fonts;
 
 		//
-		// コンストラクタです。
+		// It's a constructor.
 		//
 		TextReader(const std::vector<std::wstring>& fonts)
 			: fonts(fonts)
@@ -40,13 +40,18 @@ namespace apn::font_select
 		//
 		// テキストファイルを読み込みます。
 		//
+		inline void debug_message_box(LPCWSTR text, LPCWSTR title = L"Debug")
+		{
+			::MessageBoxW(nullptr, text, title, MB_OK | MB_ICONINFORMATION);
+		}
+
 		void read()
 		{
 			// フォントリストのテキストファイル名を取得します。
 			auto file_name = magi.get_config_file_name(L"font_select/font_menu.txt");
 			MY_TRACE_STR(file_name);
 			if (!std::filesystem::exists(file_name))
-				auto file_name = magi.get_assets_file_name(L"font_select/font_menu.txt");
+				file_name = magi.get_assets_file_name(L"font_select/font_menu.txt");
 			MY_TRACE_STR(file_name);
 
 			// テキストファイルストリームを開きます。
@@ -67,7 +72,7 @@ namespace apn::font_select
 		}
 
 		//
-		// 文字列ストリームからメニュー項目を読み込みます。
+		// Reads menu items from the string stream.
 		//
 		BOOL read(std::wstringstream& stream, Hive::Menu::Node& node)
 		{
@@ -89,7 +94,7 @@ namespace apn::font_select
 				// グループ行の場合は
 				if (line.starts_with(L'/'))
 				{
-					// 名前なしグループ行の場合は
+					// For an unnamed group line
 					if (line.length() == 1)
 					{
 						return FALSE;
@@ -126,7 +131,7 @@ namespace apn::font_select
 					catch (...)
 					{
 						// 正規表現の文法エラーであることをユーザーに知らせます。
-						node.nodes.emplace_back(MF_STRING, 0, std::format(L"{}は文法エラーです", line));
+						node.nodes.emplace_back(MF_STRING, 0, std::format(L"{} is a grammatical error", line));
 					}
 				}
 			}

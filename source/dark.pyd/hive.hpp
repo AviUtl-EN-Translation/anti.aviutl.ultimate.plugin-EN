@@ -8,7 +8,7 @@ namespace apn::dark
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"dark.pyd";
-		inline static constexpr auto c_display_name = L"ダークモード化(Python)";
+		inline static constexpr auto c_display_name = L"Dark Mode(Python)";
 
 		//
 		// このモジュールのインスタンスハンドルです。

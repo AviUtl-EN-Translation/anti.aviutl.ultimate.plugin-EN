@@ -1,6 +1,6 @@
 ﻿//{{NO_DEPENDENCIES}}
-// Microsoft Visual C++ で生成されたインクルード ファイル。
-// install.exe.rc で使用
+// Microsoft Visual C++에서 생성한 포함 파일입니다.
+// install.exe.rc에서 사용되고 있습니다.
 //
 #define IDD_OPTION_DIALOG               102
 #define IDD_REVIEW_DIALOG               103

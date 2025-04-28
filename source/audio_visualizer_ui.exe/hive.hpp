@@ -8,7 +8,7 @@ namespace apn::audio_visualizer::ui
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"audio_visualizer_ui";
-		inline static constexpr auto c_display_name = L"音声視覚化(外部)";
+		inline static constexpr auto c_display_name = L"Audio Visualizer(External)";
 
 		inline static constexpr struct Message {
 			inline static constexpr uint32_t c_analyze_audio = WM_APP + 1;

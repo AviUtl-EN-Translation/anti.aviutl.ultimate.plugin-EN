@@ -82,10 +82,10 @@ namespace apn
 			auto module_file_name = my::get_module_file_name(instance);
 
 			if (instance)
-				// AviUtlプロセス内の場合は
+				// within the AviUtl process
 				return module_file_name.parent_path() / module_file_name.stem() / folder / name;
 			else
-				// AviUtlプロセス外の場合は
+				// outside the AviUtl process
 				return module_file_name.parent_path().parent_path() / folder / name;
 		}
 
