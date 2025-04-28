@@ -68,10 +68,10 @@ namespace apn::workspace
 			OPENFILENAMEW ofn = { sizeof(ofn) };
 			ofn.hwndOwner = hive.main_window;
 			ofn.Flags = OFN_FILEMUSTEXIST;
-			ofn.lpstrTitle = L"レイアウトのインポート";
+			ofn.lpstrTitle = L"Import Layout";
 			ofn.lpstrFile = file_name.data();
 			ofn.nMaxFile = file_name.size();
-			ofn.lpstrFilter = L"レイアウトファイル (*.json)\0*.json\0" "すべてのファイル (*.*)\0*.*\0";
+			ofn.lpstrFilter = L"Layout files (*.json)\0*.json\0" "All files (*.*)\0*.*\0";
 			ofn.lpstrDefExt = L"json";
 			if (!::GetOpenFileNameW(&ofn))
 				return FALSE;
@@ -96,10 +96,10 @@ namespace apn::workspace
 			OPENFILENAMEW ofn = { sizeof(ofn) };
 			ofn.hwndOwner = hive.main_window;
 			ofn.Flags = OFN_OVERWRITEPROMPT;
-			ofn.lpstrTitle = L"レイアウトのエクスポート";
+			ofn.lpstrTitle = L"Export Layout";
 			ofn.lpstrFile = file_name.data();
 			ofn.nMaxFile = file_name.size();
-			ofn.lpstrFilter = L"レイアウトファイル (*.json)\0*.json\0" "すべてのファイル (*.*)\0*.*\0";
+			ofn.lpstrFilter = L"Layout files (*.json)\0*.json\0" "All files (*.*)\0*.*\0";
 			ofn.lpstrDefExt = L"json";
 			if (!::GetSaveFileNameW(&ofn))
 				return FALSE;

@@ -46,11 +46,11 @@ namespace apn::workspace
 		// 標準カテゴリです。
 		//
 		inline static const std::vector<std::wstring> c_default_category = {
-			L"プライマリ",
-			L"セカンダリ",
-			L"サブウィンドウ",
-			L"サブプロセス",
-			L"アルティメット",
+			L"Primary",
+			L"Secondary",
+			L"Sub window",
+			L"Sub project",
+			L"Ultimate",
 		};
 
 		//
@@ -105,8 +105,8 @@ namespace apn::workspace
 		inline static std::wstring decorate_name(const std::wstring& name)
 		{
 			if (name == L"AviUtl" ||
-				name == L"拡張編集" ||
-				name == L"設定ダイアログ")
+				name == L"Advanced Editing" ||
+				name == L"Configuration Dialog")
 			{
 				return L"* " + name;
 			}
@@ -190,7 +190,7 @@ namespace apn::workspace
 			MY_TRACE_RECT2(client_rc);
 
 			// 設定ダイアログの初期位置は縦に長過ぎたりするので微調整します。
-			if (name == L"* 設定ダイアログ")
+			if (name == L"* Configuration Dialog")
 			{
 				client_rc.right += ::GetSystemMetrics(SM_CXSIZEFRAME) * 2;
 				client_rc.bottom /= 2;
@@ -267,27 +267,27 @@ namespace apn::workspace
 		virtual LPCWSTR get_initial_category_name()
 		{
 			if (name == L"* AviUtl" ||
-				name == L"* 拡張編集" ||
-				name == L"* 設定ダイアログ" ||
-				name == L"ぼかしフィルタ" ||
-				name == L"クリッピング＆リサイズ" ||
-				name == L"シャープフィルタ" ||
-				name == L"ツールウィンドウ" ||
-				name == L"ノイズ除去(時間軸)フィルタ" ||
-				name == L"ノイズ除去フィルタ" ||
-				name == L"ヒストグラム" ||
-				name == L"偶数" ||
-				name == L"再生ウィンドウ" ||
-				name == L"奇数" ||
-				name == L"拡張色調補正" ||
-				name == L"縁塗りつぶし" ||
-				name == L"自動24fps" ||
-				name == L"色調補正フィルタ" ||
-				name == L"音声の位置調整" ||
-				name == L"音量の最大化" ||
-				name == L"音量の調整")
+				name == L"* Advanced Editing" ||
+				name == L"* Configuration Dialog" ||
+				name == L"Blur" ||
+				name == L"Clipping and Resize" ||
+				name == L"Sharpening" ||
+				name == L"Tool window" ||
+				name == L"Denoise(temproal)" ||
+				name == L"Denoise" ||
+				name == L"Histogram" ||
+				name == L"Even" ||
+				name == L"Playback window" ||
+				name == L"Odd" ||
+				name == L"Advanced color correction" ||
+				name == L"Fill border" ||
+				name == L"Auto 24fps" ||
+				name == L"Color correction" ||
+				name == L"Audio Delay" ||
+				name == L"Normalize volume" ||
+				name == L"Volume level")
 			{
-				return L"プライマリ";
+				return L"Primary";
 			}
 
 			return nullptr;

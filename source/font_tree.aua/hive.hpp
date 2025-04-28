@@ -8,7 +8,7 @@ namespace apn::font_tree
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"font_tree";
-		inline static constexpr auto c_display_name = L"フォントツリー";
+		inline static constexpr auto c_display_name = L"Font Tree";
 
 		//
 		// このアドインのインスタンスハンドルです。

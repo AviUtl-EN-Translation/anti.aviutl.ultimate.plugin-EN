@@ -8,7 +8,7 @@ namespace apn::image_export
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"image_export";
-		inline static constexpr auto c_display_name = L"画像エクスポート";
+		inline static constexpr auto c_display_name = L"Image Export";
 
 		inline static constexpr struct Mode {
 			inline static constexpr int32_t c_manual = 0;

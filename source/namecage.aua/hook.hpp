@@ -14,7 +14,8 @@ namespace apn::namecage
 		{
 			MY_TRACE_FUNC("");
 
-			// 拡張編集のモジュールハンドルを取得します。
+			// 
+			// のモジュールハンドルを取得します。
 			auto exedit = magi.exin.get_exedit();
 			if (!exedit) return FALSE;
 

@@ -29,7 +29,7 @@ namespace apn::workspace
 				this->dialog = dialog;
 
 				// 「口パク」「目パチ」ダイアログだけに限定します。
-				if (!::FindWindowEx(dialog, nullptr, WC_STATIC, _T("開き"))) return;
+				if (!::FindWindowEx(dialog, nullptr, WC_STATIC, _T("Open"))) return;
 
 				// サブプロセスウィンドウのハンドルを取得します。
 				hwnd = shuttle->window;

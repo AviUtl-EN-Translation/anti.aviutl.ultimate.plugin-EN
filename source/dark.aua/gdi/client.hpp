@@ -101,7 +101,7 @@ namespace apn::dark::gdi
 				auto parent = ::GetParent(hwnd);
 				auto window_name = my::get_window_text(parent);
 
-				if (window_name == _T("ラウドネスメーター(全体)"))
+				if (window_name == _T("Loudness meter (whole)"))
 					my::modify_style(hwnd, 0, SS_CENTERIMAGE);
 			}
 		}

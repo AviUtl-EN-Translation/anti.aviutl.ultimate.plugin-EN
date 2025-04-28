@@ -8,7 +8,7 @@ namespace apn::ease_select_ui
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"ease_select_ui";
-		inline static constexpr auto c_display_name = L"イージング選択のUI";
+		inline static constexpr auto c_display_name = L"Easing Select UI";
 
 		struct App {
 			virtual BOOL read_config() = 0;

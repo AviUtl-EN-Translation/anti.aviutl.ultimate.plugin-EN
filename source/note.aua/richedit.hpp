@@ -34,7 +34,7 @@ namespace apn::note
 				0, 0, 0, 0,
 				parent, nullptr, hive.instance, nullptr))
 			{
-				hive.message_box(L"リッチエディットコントロールの作成に失敗しました");
+				hive.message_box(L"Failed to create rich edit control");
 
 				return FALSE;
 			}
@@ -119,15 +119,15 @@ namespace apn::note
 
 							my::menu::unique_ptr<> menu(::CreatePopupMenu());
 
-							::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_undo, L"元に戻す(&U)");
-							::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_redo, L"やり直し(&R)");
+							::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_undo, L"Undo(&U)");
+							::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_redo, L"Redo(&R)");
 							::AppendMenuW(menu.get(), MF_SEPARATOR, 0, nullptr);
-							::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_cut, L"切り取り(&T)");
-							::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_copy, L"コピー(&C)");
-							::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_paste, L"貼り付け(&P)");
+							::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_cut, L"Cut(&T)");
+							::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_copy, L"Copy(&C)");
+							::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_paste, L"Paste(&P)");
 							::AppendMenuW(menu.get(), MF_SEPARATOR, 0, nullptr);
-							::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_erase, L"削除(&D)");
-							::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_select_all, L"すべて選択(&A)");
+							::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_erase, L"Delete(&D)");
+							::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_select_all, L"Select all(&A)");
 
 							if (!::SendMessage(*this, EM_CANUNDO, 0, 0)) ::EnableMenuItem(menu.get(), c_command_id.c_undo, MF_DISABLED | MF_GRAYED);
 							if (!::SendMessage(*this, EM_CANREDO, 0, 0)) ::EnableMenuItem(menu.get(), c_command_id.c_redo, MF_DISABLED | MF_GRAYED);

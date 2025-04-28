@@ -118,32 +118,32 @@ namespace apn
 
 					switch (type)
 					{
-					case 0x00: name = "震える"; break;
-					case 0x01: name = "振り子"; break;
-					case 0x02: name = "弾む"; break;
-					case 0x03: name = "座標の拡大縮小(個別オブジェクト)"; break;
-					case 0x04: name = "画面外から登場"; break;
-					case 0x05: name = "ランダム方向から登場"; break;
-					case 0x06: name = "拡大縮小して登場"; break;
-					case 0x07: name = "ランダム間隔で落ちながら登場"; break;
-					case 0x08: name = "弾んで登場"; break;
-					case 0x09: name = "広がって登場"; break;
-					case 0x0A: name = "起き上がって登場"; break;
-					case 0x0B: name = "何処からともなく登場"; break;
-					case 0x0C: name = "反復移動"; break;
-					case 0x0D: name = "座標の回転(個別オブジェクト)"; break;
-					case 0x0E: name = "立方体(カメラ制御)"; break;
-					case 0x0F: name = "球体(カメラ制御)"; break;
-					case 0x10: name = "砕け散る"; break;
-					case 0x11: name = "点滅"; break;
-					case 0x12: name = "点滅して登場"; break;
-					case 0x13: name = "簡易変形"; break;
-					case 0x14: name = "簡易変形(カメラ制御)"; break;
-					case 0x15: name = "リール回転"; break;
-					case 0x16: name = "万華鏡"; break;
-					case 0x17: name = "円形配置"; break;
-					case 0x18: name = "ランダム配置"; break;
-					default: name = "アニメーション効果"; break;
+					case 0x00: name = "Trembling"; break;
+					case 0x01: name = "Pendulum"; break;
+					case 0x02: name = "Bounce"; break;
+					case 0x03: name = "Scale coordinate(as individual object)"; break;
+					case 0x04: name = "Appeared from off-screen"; break;
+					case 0x05: name = "Appeared from random direction"; break;
+					case 0x06: name = "Appear while scailing"; break;
+					case 0x07: name = "Appear while falling at random interval"; break;
+					case 0x08: name = "Appeare with bounce"; break;
+					case 0x09: name = "Appear spreading"; break;
+					case 0x0A: name = "Appear while rising up"; break;
+					case 0x0B: name = "Appear from nowhere"; break;
+					case 0x0C: name = "Repetitive"; break;
+					case 0x0D: name = "Rotation of the coordinate (individual objects)"; break;
+					case 0x0E: name = "Cube (camera control)"; break;
+					case 0x0F: name = "Sphere (camera control)"; break;
+					case 0x10: name = "Shatter"; break;
+					case 0x11: name = "Blinking"; break;
+					case 0x12: name = "Appear while blinking"; break;
+					case 0x13: name = "Simple deformation"; break;
+					case 0x14: name = "Simple deformation (camera control)"; break;
+					case 0x15: name = "Reel rotation"; break;
+					case 0x16: name = "Kaleidoscope"; break;
+					case 0x17: name = "Circular arrangement"; break;
+					case 0x18: name = "Random location"; break;
+					default: name = "Animation effect"; break;
 					}
 				}
 				return name;

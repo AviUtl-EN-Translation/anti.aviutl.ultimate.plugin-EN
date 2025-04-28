@@ -15,7 +15,7 @@ namespace apn::note
 		{
 			MY_TRACE_FUNC("");
 
-			return __super::init(L"プロジェクトノート");
+			return __super::init(L"Project Notes");
 		}
 
 		//

@@ -47,7 +47,7 @@ namespace apn::settings_browser
 			// ポップアップメニューを作成します。
 			my::menu::unique_ptr<> menu(::CreatePopupMenu());
 
-			::AppendMenu(menu.get(), MF_STRING, c_auto_get, _T("自動的に取得"));
+			::AppendMenu(menu.get(), MF_STRING, c_auto_get, _T("Get Automatically"));
 			if (hive.auto_get)
 				::CheckMenuItem(menu.get(), c_auto_get, MF_CHECKED);
 
@@ -151,10 +151,10 @@ namespace apn::settings_browser
 					ofn.hwndOwner = hive.main_window;
 					ofn.Flags = OFN_FILEMUSTEXIST;
 					ofn.lpstrInitialDir = hive.assets_folder_name.c_str();
-					ofn.lpstrTitle = L"htmlファイルを選択";
+					ofn.lpstrTitle = L"Select html files";
 					ofn.lpstrFile = file_name.data();
 					ofn.nMaxFile = file_name.size();
-					ofn.lpstrFilter = L"htmlファイル (*.html)\0*.html\0" "すべてのファイル (*.*)\0*.*\0";
+					ofn.lpstrFilter = L"html files (*.html)\0*.html\0" "All files (*.*)\0*.*\0";
 					ofn.lpstrDefExt = L"html";
 					if (!::GetOpenFileNameW(&ofn))
 						break;

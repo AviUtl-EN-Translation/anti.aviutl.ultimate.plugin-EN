@@ -67,7 +67,7 @@ namespace apn::text_drop
 		{
 			MY_TRACE_FUNC("");
 
-			init_combobox(IDC_ITEM_DIRECTION, _T("横方向"), _T("縦方向"));
+			init_combobox(IDC_ITEM_DIRECTION, _T("Horizontal"), _T("Vertical"));
 
 			using namespace my::layout;
 

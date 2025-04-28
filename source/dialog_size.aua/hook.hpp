@@ -9,9 +9,11 @@ namespace apn::dialog_size
 	{
 		HINSTANCE aviutl = nullptr;
 		HINSTANCE exedit = nullptr;
+		HINSTANCE enmod1_5 = nullptr;
+		HINSTANCE enmod1_5_XP = nullptr;
 
 		//
-		// カスタマイズされたダイアログのインスタンスを返します。
+		// Returns a customized dialog instance.
 		//
 		inline static HINSTANCE customize(HINSTANCE instance)
 		{
@@ -36,10 +38,12 @@ namespace apn::dialog_size
 		}
 
 		//
-		// 与えられたインスタンスがカスタマイズ対象の場合はTRUEを返します。
+		// Returns TRUE if the given instance is for customization.
 		//
 		inline BOOL is_target(HINSTANCE instance)
 		{
+			if (instance == enmod1_5) return TRUE;
+			if (instance == enmod1_5_XP) return TRUE;
 			if (instance == aviutl) return TRUE;
 			if (instance == exedit) return TRUE;
 
@@ -55,6 +59,8 @@ namespace apn::dialog_size
 
 			aviutl = ::GetModuleHandle(nullptr);
 			exedit = ::GetModuleHandle(_T("exedit.auf"));
+			enmod1_5 = ::GetModuleHandle(_T("EnMod1_5.aul"));
+			enmod1_5_XP = ::GetModuleHandle(_T("EnMod_1_5XP.aul"));
 
 			DetourTransactionBegin();
 			DetourUpdateThread(::GetCurrentThread());
@@ -98,9 +104,13 @@ namespace apn::dialog_size
 		//
 		// このクラスは::DialogBoxParamA()をフックします。
 		//
+
+
 		inline static struct {
+
 			inline static INT_PTR WINAPI hook_proc(HINSTANCE instance, LPCSTR template_name, HWND parent, DLGPROC dlg_proc, LPARAM init_param)
 			{
+
 				const auto do_customize = [&]() {
 					return orig_proc(customize(instance), customize(template_name).c_str(), parent, dlg_proc, init_param);
 				};
@@ -115,7 +125,7 @@ namespace apn::dialog_size
 
 					if (hook_manager.is_target(instance))
 					{
-						MY_TRACE("ダイアログを置き換えます\n");
+						MY_TRACE("Replace the dialog\n");
 
 						if (::lstrcmpA(template_name, "NEW_FILE") == 0)
 						{
@@ -137,6 +147,9 @@ namespace apn::dialog_size
 						}
 
 						return do_customize();
+					}
+					else {
+
 					}
 				}
 

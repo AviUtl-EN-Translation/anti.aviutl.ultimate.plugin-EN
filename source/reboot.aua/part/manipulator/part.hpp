@@ -114,11 +114,11 @@ namespace apn::reboot::manipulator
 			my::menu::unique_ptr<> menu(::CreatePopupMenu());
 
 			// optimize_heapを追加します。
-			::AppendMenu(menu.get(), MF_STRING, c_optimize_heap, _T("ヒープを最適化する"));
+			::AppendMenu(menu.get(), MF_STRING, c_optimize_heap, _T("Optimize heap"));
 			if (agit.optimize_heap) ::CheckMenuItem(menu.get(), c_optimize_heap, MF_CHECKED);
 
 			// reset_workingset_sizeを追加します。
-			::AppendMenu(menu.get(), MF_STRING, c_reset_workingset_size, _T("ワーキングセットサイズをリセットする"));
+			::AppendMenu(menu.get(), MF_STRING, c_reset_workingset_size, _T("Reset the Working Set Size"));
 			if (agit.reset_workingset_size) ::CheckMenuItem(menu.get(), c_reset_workingset_size, MF_CHECKED);
 
 			// ポップアップメニューを表示します。
@@ -158,9 +158,9 @@ namespace apn::reboot::manipulator
 
 			auto aviutl_window = hive.aviutl_window;
 			auto menu = ::GetMenu(aviutl_window);
-			auto edit_menu = find_menu(menu, _T("編集"));
+			auto edit_menu = find_menu(menu, _T("Editing"));
 			auto psd_tool_kit_menu = find_menu(edit_menu, _T("PSDToolKit"));
-			auto id = find_menu_item(psd_tool_kit_menu, _T("ウィンドウを表示"));
+			auto id = find_menu_item(psd_tool_kit_menu, _T("View Window"));
 			if (!id) return FALSE;
 			return ::PostMessage(aviutl_window, WM_COMMAND, id, 0);
 		}

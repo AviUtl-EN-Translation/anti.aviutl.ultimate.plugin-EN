@@ -8,7 +8,7 @@ namespace apn::last_frame
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"last_frame";
-		inline static constexpr auto c_display_name = L"最終フレーム自動調整";
+		inline static constexpr auto c_display_name = L"Auto-adjust Last Frame";
 
 		//
 		// このアドインのインスタンスハンドルです。

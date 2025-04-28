@@ -16,7 +16,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// 擔杮岅 (擔杮) resources
+// 老夯绢(老夯) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
 LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
@@ -29,7 +29,7 @@ LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
 
 GET_COLOR DIALOGEX 0, 0, 222, 150
 STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "怓偺慖戰"
+CAPTION "Select Color"
 FONT 10, "MS Shell Dlg", 400, 0, 0x80
 BEGIN
     LTEXT           "",132,8,8,13,13,SS_NOTIFY | SS_SUNKEN | NOT WS_GROUP
@@ -76,9 +76,9 @@ BEGIN
     CONTROL         "UpDown3",113,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,110,69,9,14
     EDITTEXT        IDC_COLOR_CODE,66,105,30,14,ES_AUTOHSCROLL
     PUSHBUTTON      "",121,96,105,14,14,BS_ICON | BS_CENTER
-    PUSHBUTTON      "怓巜掕柍偟",122,16,129,40,14,BS_CENTER
+    PUSHBUTTON      "No color",122,16,129,40,14,BS_CENTER
     PUSHBUTTON      "OK",1,72,129,40,14,BS_CENTER
-    PUSHBUTTON      "僉儍儞僙儖",2,116,129,40,14,BS_CENTER
+    PUSHBUTTON      "Cancel",2,116,129,40,14,BS_CENTER
 END
 
 
@@ -138,7 +138,7 @@ END
 
 #endif    // APSTUDIO_INVOKED
 
-#endif    // 擔杮岅 (擔杮) resources
+#endif    // 老夯绢(老夯) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

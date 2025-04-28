@@ -8,7 +8,7 @@ namespace apn::note
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"note";
-		inline static constexpr auto c_display_name = L"メモ帳";
+		inline static constexpr auto c_display_name = L"Note";
 
 		//
 		// このアドインのインスタンスハンドルです。

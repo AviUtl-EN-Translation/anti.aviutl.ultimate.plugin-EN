@@ -2,11 +2,11 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
-    <my_source>$(UserProfile)\source</my_source>
-    <my_packages>$(my_source)\packages</my_packages>
+    <my_source>D:\Aviutl-Plugin-EN</my_source>
+    <my_packages>$(my_source)\IncludingFile</my_packages>
     <aviutl_exedit_sdk>$(my_packages)\aviutl_exedit_sdk</aviutl_exedit_sdk>
     <detours>$(my_packages)\detours.4.0.1</detours>
-    <python>$(my_packages)\Python\Python312-32</python>
+    <python>$(my_packages)\Python\Python312</python>
     <pybind11>$(python)\lib\site-packages\pybind11</pybind11>
     <my_pack_dir>$(my_source)\pack\ultimate</my_pack_dir>
     <my_runtime_dir>$(my_pack_dir)\install\runtime</my_runtime_dir>

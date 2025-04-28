@@ -25,11 +25,11 @@ namespace apn::audio_visualizer
 				// 一旦アドインダイアログをロックします。
 				AddinDialog::Locker locker(&addin_dialog);
 
-				// コンフィグを読み込みます。
-				// この中でコウィンドウが作成されます。
+				// Load the configuration.
+				// A window is created in this context.
 				if (!config_io.read())
 				{
-					constexpr LPCWSTR names[] = { L"左右Lv", L"左Lv", L"右Lv" };
+					constexpr LPCWSTR names[] = { L"L/R Lv", L"Left Lv", L"Right Lv" };
 
 					for (auto name : names)
 					{
@@ -114,8 +114,8 @@ namespace apn::audio_visualizer
 
 			// メッセージテキストを構築します。
 			auto text = std::format(
-				_T("ウィンドウ「{}」を削除しますか？") _T("\n")
-				_T("※ウィンドウを削除するとウィンドウの設定も一緒に削除されます"), name);
+				_T("Do you want to delete the window 「{}」?") _T("\n")
+				_T("※If you delete the window, the window settings will be deleted as well"), name);
 			MY_TRACE_STR(text);
 
 			// メッセージボックスを出してユーザーに確認します。
@@ -234,7 +234,7 @@ namespace apn::audio_visualizer
 				if (!is_available_name(new_name))
 				{
 					// メッセージボックスを表示します。
-					hive.message_box(L"名前が重複しています", *this, MB_OK | MB_ICONWARNING);
+					hive.message_box(L"Duplicate names", *this, MB_OK | MB_ICONWARNING);
 
 					return;
 				}

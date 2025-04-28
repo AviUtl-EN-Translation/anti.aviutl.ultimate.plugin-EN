@@ -176,7 +176,7 @@ namespace apn::reboot::reloader
 			// ポップアップメニューを作成します。
 			my::menu::unique_ptr<> menu(::CreatePopupMenu());
 
-			::AppendMenu(menu.get(), MF_STRING, c_with_write, _T("再起動前に上書き保存する"));
+			::AppendMenu(menu.get(), MF_STRING, c_with_write, _T("Save Overwrite Before Restart"));
 			if (agit.with_write)
 				::CheckMenuItem(menu.get(), c_with_write, MF_CHECKED);
 

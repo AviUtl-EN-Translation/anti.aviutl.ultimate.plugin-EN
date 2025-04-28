@@ -8,7 +8,7 @@ namespace apn
 	struct StdConfigIO
 	{
 		//
-		// 指定されたファイルからコンフィグを読み込みます。
+		// Gets components from the specified file.
 		//
 		BOOL read_file(const std::wstring& config_file_name, auto& error_handler)
 		{
@@ -71,7 +71,7 @@ namespace apn
 		virtual BOOL update() { return FALSE; }
 
 		//
-		// 指定されたストリームからコンフィグを読み込みます。
+		// Reads the configuration from the specified stream.
 		//
 		virtual BOOL read_stream(std::ifstream& ifs)
 		{

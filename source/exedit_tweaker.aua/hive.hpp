@@ -8,7 +8,7 @@ namespace apn
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"exedit_tweaker";
-		inline static constexpr auto c_display_name = L"拡張編集微調整";
+		inline static constexpr auto c_display_name = L"Exedit Tweaker";
 
 		struct Fill {
 			COLORREF color;

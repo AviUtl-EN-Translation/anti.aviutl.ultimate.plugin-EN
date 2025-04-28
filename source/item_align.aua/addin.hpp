@@ -45,20 +45,20 @@ namespace apn::item_align
 			if (!config_io.init()) return FALSE;
 
 			// AviUtlにメニューアイテムを追加します。
-			add_menu_item(fp, L"ずらす▼", IDC_SHIFT_DOWN);
-			add_menu_item(fp, L"ずらす▲", IDC_SHIFT_UP);
-			add_menu_item(fp, L"隙間(相対)←", IDC_REL_SPACE_LEFT);
-			add_menu_item(fp, L"隙間(相対)→", IDC_REL_SPACE_RIGHT);
-			add_menu_item(fp, L"隙間(絶対)←", IDC_ABS_SPACE_LEFT);
-			add_menu_item(fp, L"隙間(絶対)→", IDC_ABS_SPACE_RIGHT);
-			add_menu_item(fp, L"伸ばす←", IDC_STRETCH_LEFT);
-			add_menu_item(fp, L"伸ばす→", IDC_STRETCH_RIGHT);
-			add_menu_item(fp, L"詰める←", IDC_ALIGN_LEFT);
-			add_menu_item(fp, L"詰める→", IDC_ALIGN_RIGHT);
-			add_menu_item(fp, L"詰める▼", IDC_MOVE_VERT_DOWN);
-			add_menu_item(fp, L"詰める▲", IDC_MOVE_VERT_UP);
-			add_menu_item(fp, L"BPMズレを修正", IDC_FIX_BPM);
-			add_menu_item(fp, L"現在位置の近くにある中間点を削除", IDC_ERASE_MIDPT);
+			add_menu_item(fp, L"Shift ▼", IDC_SHIFT_DOWN);
+			add_menu_item(fp, L"Shift ▲", IDC_SHIFT_UP);
+			add_menu_item(fp, L"Relative Space ←", IDC_REL_SPACE_LEFT);
+			add_menu_item(fp, L"Relative Space →", IDC_REL_SPACE_RIGHT);
+			add_menu_item(fp, L"Absolute Space ←", IDC_ABS_SPACE_LEFT);
+			add_menu_item(fp, L"Absolute Space →", IDC_ABS_SPACE_RIGHT);
+			add_menu_item(fp, L"Stretch ←", IDC_STRETCH_LEFT);
+			add_menu_item(fp, L"Stretch →", IDC_STRETCH_RIGHT);
+			add_menu_item(fp, L"Align ←", IDC_ALIGN_LEFT);
+			add_menu_item(fp, L"Align →", IDC_ALIGN_RIGHT);
+			add_menu_item(fp, L"Align ▼", IDC_MOVE_VERT_DOWN);
+			add_menu_item(fp, L"Align ▲", IDC_MOVE_VERT_UP);
+			add_menu_item(fp, L"Fix BPM Shift", IDC_FIX_BPM);
+			add_menu_item(fp, L"Delete Midpoint Near Current Position", IDC_ERASE_MIDPT);
 
 			if (!config_io.read()) MY_TRACE("コンフィグの読み込みに失敗しました\n");
 

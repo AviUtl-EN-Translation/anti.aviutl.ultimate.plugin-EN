@@ -154,7 +154,7 @@ namespace apn::font_preview
 			my::menu::unique_ptr<> menu(::CreatePopupMenu());
 
 			// ポップアップメニューに項目を追加します。
-			::AppendMenu(menu.get(), MF_STRING, c_copy_font_name, _T("フォント名をコピー"));
+			::AppendMenu(menu.get(), MF_STRING, c_copy_font_name, _T("Copy font name"));
 
 			// ポップアップメニューを表示します。
 			auto id = ::TrackPopupMenuEx(menu.get(),

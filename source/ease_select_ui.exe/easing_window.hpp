@@ -148,7 +148,7 @@ namespace apn::ease_select_ui
 			auto text = my::get_window_text(hwnd);
 			MY_TRACE_STR(text);
 
-			if (text != _T("移動フレーム間隔")) return 0;
+			if (text != _T("Move frame interval")) return 0;
 
 			return hwnd;
 		}

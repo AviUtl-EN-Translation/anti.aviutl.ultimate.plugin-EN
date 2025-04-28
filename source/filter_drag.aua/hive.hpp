@@ -8,7 +8,7 @@ namespace apn::filter_drag
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"filter_drag";
-		inline static constexpr auto c_display_name = L"フィルタドラッグ";
+		inline static constexpr auto c_display_name = L"Filter Drag";
 
 		//
 		// このアドインのインスタンスハンドルです。

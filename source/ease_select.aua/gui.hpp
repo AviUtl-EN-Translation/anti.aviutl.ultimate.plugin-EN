@@ -35,7 +35,7 @@ namespace apn::ease_select
 				&si,			// Pointer to STARTUPINFO structure
 				&pi))			// Pointer to PROCESS_INFORMATION structur
 			{
-				hive.message_box(std::format(L"{}の起動に失敗しました\n", path));
+				hive.message_box(std::format(L"Failed to start {}\n", path));
 
 				return FALSE;
 			}

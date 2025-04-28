@@ -45,7 +45,7 @@ namespace apn::text_split
 			if (!config_io.init()) return FALSE;
 
 			// AviUtlにメニューアイテムを追加します。
-			add_menu_item(fp, L"テキストを分解する", IDC_SPLIT_TEXT);
+			add_menu_item(fp, L"Split text", IDC_SPLIT_TEXT);
 
 			if (!config_io.read()) MY_TRACE("コンフィグの読み込みに失敗しました\n");
 

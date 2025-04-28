@@ -21,7 +21,7 @@ namespace apn::dialog_position
 
 			if (DetourTransactionCommit() == NO_ERROR)
 			{
-				MY_TRACE("拡張編集のフックに成功しました\n");
+				MY_TRACE("のフックに成功しました\n");
 
 				return TRUE;
 			}

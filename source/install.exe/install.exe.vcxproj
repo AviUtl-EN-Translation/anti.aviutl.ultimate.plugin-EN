@@ -269,7 +269,9 @@ copy /Y "$(VC_CppRuntimeFilesPath_x86)\Microsoft.VC143.CRT\*" "$(my_runtime_dir)
     <ClInclude Include="hive.hpp" />
     <ClInclude Include="main_window.hpp" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="result_dialog.hpp" />
     <ClInclude Include="review_dialog.hpp" />
     <ClInclude Include="targetver.h" />

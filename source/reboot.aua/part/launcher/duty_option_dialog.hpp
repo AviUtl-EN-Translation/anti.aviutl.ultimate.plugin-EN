@@ -19,10 +19,10 @@ namespace apn::reboot::launcher
 			OPENFILENAMEW ofn = { sizeof(ofn) };
 			ofn.hwndOwner = *this;
 			ofn.Flags = OFN_FILEMUSTEXIST;
-			ofn.lpstrTitle = L"ファイルを選択";
+			ofn.lpstrTitle = L"Select file";
 			ofn.lpstrFile = file_name.data();
 			ofn.nMaxFile = file_name.size();
-			ofn.lpstrFilter = L"すべてのファイル (*.*)\0*.*\0";
+			ofn.lpstrFilter = L"All files (*.*)\0*.*\0";
 
 			// ファイル選択ダイアログを表示します。
 			if (!::GetOpenFileNameW(&ofn)) return FALSE;

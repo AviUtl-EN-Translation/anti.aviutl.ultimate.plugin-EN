@@ -8,7 +8,7 @@ namespace apn::one_for_text
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"one_for_text";
-		inline static constexpr auto c_display_name = L"テキスト一括編集";
+		inline static constexpr auto c_display_name = L"Edit Text Batch";
 
 		//
 		// このアドインのインスタンスハンドルです。

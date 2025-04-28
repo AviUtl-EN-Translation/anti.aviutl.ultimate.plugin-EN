@@ -64,21 +64,21 @@ namespace apn::dark
 				// dark.pydを読み込みます。
 				dark_module = py::module::import("dark");
 				if (!dark_module)
-					throw std::exception("dark.pydの読み込みに失敗しました");
+					throw std::exception("Failed to load dark.pid");
 
 				// hive_moduleを作成します。
 				hive_module = dark_module.def_submodule("hive");
 				if (!hive_module)
-					throw std::exception("hive_moduleの作成に失敗しました");
+					throw std::exception("Failed to create hive_module");
 
 				// dark.pydの初期化関数を実行します。
 				if (!dark_module.attr("init")((void*)hive.addin).cast<BOOL>())
-					 throw std::exception("dark.init()が失敗しました");
+					 throw std::exception("dark.init() failed");
 
 				// boot.pyを読み込みます。
 				boot_module = py::module::import("boot");
 				if (!boot_module)
-					throw std::exception("boot.pyの読み込みに失敗しました");
+					throw std::exception("Failed to load boot.py");
 			}
 			catch (const std::exception& error)
 			{
@@ -307,7 +307,7 @@ namespace apn::dark
 				// スキンモジュールを読み込みます。
 				skin_module = boot_module.attr("boot_skin_module")(skin_module_name).cast<py::module>();
 				if (!skin_module)
-					throw std::exception(std::format("{}の読み込みに失敗しました", skin_module_name).c_str());
+					throw std::exception(std::format("Failed to load {}", skin_module_name).c_str());
 
 				dark_module.add_object("skin", skin_module, true);
 
@@ -341,7 +341,7 @@ namespace apn::dark
 				scheme_module = boot_module.attr("boot_scheme_module")(scheme_module_name).cast<py::module>();
 				if (!scheme_module)
 				{
-					auto message = std::format(L"{}の読み込みに失敗しました", ws(scheme_module_name));
+					auto message = std::format(L"Failed to load {}", ws(scheme_module_name));
 
 					throw std::exception(u8(message).c_str());
 				}

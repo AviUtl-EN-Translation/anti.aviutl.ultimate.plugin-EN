@@ -8,115 +8,115 @@ namespace apn::item_copy
 	inline struct App : AppInterface
 	{
 		//
-		// オブジェクト名を正規化して返します。
+		// Returns normalizing the object name.
 		//
 		inline static std::wstring normalize_object_name(ExEdit::Object* object)
 		{
 			switch (object->filter_param[0].id)
 			{
-			case 0: return L"動画ファイル";
-			case 1: return L"画像ファイル";
-			case 2: return L"音声ファイル";
-			case 3: return L"テキスト";
-			case 4: return L"図形";
-			case 5: return L"フレームバッファ";
-			case 6: return L"音声波形表示";
-			case 7: return L"シーン";
-			case 8: return L"シーン(音声)";
-			case 9: return L"直前オブジェクト";
-			case 10: return L"標準描画";
-			case 11: return L"拡張描画";
-			case 12: return L"標準再生";
-			case 13: return L"パーティクル出力";
-			case 14: return L"シーンチェンジ";
-			case 15: return L"色調補正";
-			case 16: return L"色調補正";
-			case 17: return L"クリッピング";
-			case 18: return L"ぼかし";
-			case 19: return L"境界ぼかし";
-			case 20: return L"ぼかし";
-			case 21: return L"モザイク";
-			case 22: return L"モザイク";
-			case 23: return L"発光";
-			case 24: return L"発光";
-			case 25: return L"閃光";
-			case 26: return L"拡散光";
-			case 27: return L"拡散光";
-			case 28: return L"グロー";
-			case 29: return L"グロー";
-			case 30: return L"クロマキー";
-			case 31: return L"カラーキー";
-			case 32: return L"ルミナンスキー";
-			case 33: return L"ライト";
-			case 34: return L"シャドー";
-			case 35: return L"縁取り";
-			case 36: return L"凸エッジ";
-			case 37: return L"エッジ抽出";
-			case 38: return L"シャープ";
-			case 39: return L"フェード";
-			case 40: return L"ワイプ";
-			case 41: return L"マスク";
-			case 42: return L"斜めクリッピング";
-			case 43: return L"放射ブラー";
-			case 44: return L"放射ブラー";
-			case 45: return L"方向ブラー";
-			case 46: return L"方向ブラー";
-			case 47: return L"レンズブラー";
-			case 48: return L"レンズブラー";
-			case 49: return L"モーションブラー";
-			case 50: return L"モーションブラー";
-			case 51: return L"座標";
-			case 52: return L"拡大率";
-			case 53: return L"透明度";
-			case 54: return L"回転";
-			case 55: return L"領域拡張";
-			case 56: return L"リサイズ";
-			case 57: return L"ローテーション";
-			case 58: return L"振動";
-			case 59: return L"振動";
-			case 60: return L"反転";
-			case 61: return L"反転";
-			case 62: return L"ミラー";
-			case 63: return L"ラスター";
-			case 64: return L"ラスター";
-			case 65: return L"波紋";
-			case 66: return L"画像ループ";
-			case 67: return L"画像ループ";
-			case 68: return L"極座標変換";
-			case 69: return L"ディスプレイスメントマップ";
-			case 70: return L"ノイズ";
-			case 71: return L"色ずれ";
-			case 72: return L"色ずれ";
-			case 73: return L"単色化";
-			case 74: return L"単色化";
-			case 75: return L"グラデーション";
-			case 76: return L"拡張色設定";
-			case 77: return L"拡張色設定";
-			case 78: return L"特定色域変換";
-			case 79: return L"アニメーション効果";
-			case 80: return L"カスタムオブジェクト";
-			case 81: return L"スクリプト制御";
-			case 82: return L"動画ファイル合成";
-			case 83: return L"画像ファイル合成";
-			case 84: return L"インターレース解除";
-			case 85: return L"カメラ制御オプション";
-			case 86: return L"オフスクリーン描画";
-			case 87: return L"オブジェクト分割";
-			case 88: return L"部分フィルタ";
-			case 89: return L"音量フェード";
-			case 90: return L"音声ディレイ";
-			case 91: return L"音声ディレイ";
-			case 92: return L"モノラル化";
-			case 93: return L"時間制御";
-			case 94: return L"グループ制御";
-			case 95: return L"カメラ制御";
-			case 96: return L"カメラ制御(拡張描画)";
-			case 97: return L"カメラ効果";
-			case 98: return L"シャドー(カメラ制御)";
-			case 99: return L"スクリプト(カメラ制御)";
+			case 0: return L"Video file";
+			case 1: return L"Image file";
+			case 2: return L"Audio file";
+			case 3: return L"Text";
+			case 4: return L"Graphic";
+			case 5: return L"Frame buffer";
+			case 6: return L"Audio waveform buffer";
+			case 7: return L"Scene";
+			case 8: return L"Scene (audio)";
+			case 9: return L"Previous object";
+			case 10: return L"Standard drawing";
+			case 11: return L"Advanced drawing";
+			case 12: return L"Standard playback";
+			case 13: return L"Particle output";
+			case 14: return L"Scene change";
+			case 15: return L"Color compensation";
+			case 16: return L"Color compensation";
+			case 17: return L"Clipping";
+			case 18: return L"Blur";
+			case 19: return L"Boundary blurring";
+			case 20: return L"Blur";
+			case 21: return L"Mosaic";
+			case 22: return L"Mosaic";
+			case 23: return L"Emission";
+			case 24: return L"Emission";
+			case 25: return L"Flash";
+			case 26: return L"Diffusion light";
+			case 27: return L"Diffusion light";
+			case 28: return L"Glow";
+			case 29: return L"Glow";
+			case 30: return L"Chroma Key";
+			case 31: return L"Color Key";
+			case 32: return L"Luminance Key";
+			case 33: return L"Light";
+			case 34: return L"Shadow";
+			case 35: return L"Add border";
+			case 36: return L"Bevel";
+			case 37: return L"Edge extraction";
+			case 38: return L"Sharpen";
+			case 39: return L"Fade";
+			case 40: return L"Wipe";
+			case 41: return L"Mask";
+			case 42: return L"Diagonal clipping";
+			case 43: return L"Radial blur";
+			case 44: return L"Radial blur";
+			case 45: return L"Direction blur";
+			case 46: return L"Direction blur";
+			case 47: return L"Lens blur";
+			case 48: return L"Lens blur";
+			case 49: return L"Motion blur";
+			case 50: return L"Motion blur";
+			case 51: return L"Coordinate";
+			case 52: return L"Zoom%";
+			case 53: return L"Clearness";
+			case 54: return L"Rotation";
+			case 55: return L"Region expansion";
+			case 56: return L"Resize";
+			case 57: return L"Locked rotation";
+			case 58: return L"Vibration";
+			case 59: return L"Vibration";
+			case 60: return L"Reversal";
+			case 61: return L"Reversal";
+			case 62: return L"Mirror";
+			case 63: return L"Raster";
+			case 64: return L"Raster";
+			case 65: return L"Ripple";
+			case 66: return L"Image tiling";
+			case 67: return L"Image tiling";
+			case 68: return L"Polar coordinate conversion";
+			case 69: return L"Displacement map";
+			case 70: return L"Noise";
+			case 71: return L"Color shift";
+			case 72: return L"Color shift";
+			case 73: return L"Monochromatic";
+			case 74: return L"Monochromatic";
+			case 75: return L"Gradient";
+			case 76: return L"Extended color setting";
+			case 77: return L"Extended color setting";
+			case 78: return L"Specific color gamut conversion";
+			case 79: return L"Animation effect";
+			case 80: return L"Custom object";
+			case 81: return L"Script control";
+			case 82: return L"Video files synthesis";
+			case 83: return L"Synthesis image file";
+			case 84: return L"De-interlacing";
+			case 85: return L"Camera control options";
+			case 86: return L"Off-screen drawing";
+			case 87: return L"Object split";
+			case 88: return L"Sub-filter";
+			case 89: return L"Volume fade";
+			case 90: return L"Audio delay";
+			case 91: return L"Audio delay";
+			case 92: return L"Monaural";
+			case 93: return L"Time control";
+			case 94: return L"Group control";
+			case 95: return L"Camera conrol";
+			case 96: return L"Camera control (advanced drawing)";
+			case 97: return L"Camera effect";
+			case 98: return L"Shadow (camera control)";
+			case 99: return L"Script (camera control)";
 			}
 
-			return L"不明";
+			return L"unknown";
 		}
 
 		//
@@ -128,7 +128,7 @@ namespace apn::item_copy
 			::GetLocalTime(&local_time);
 
 			auto file_spec = std::format(
-				L"{}{:04d}年{:02d}月{:02d}日{:02d}時{:02d}分{:02d}.{:03d}秒.{}",
+				L"{}{:04d}y{:02d}m{:02d}d_{:02d}h{:02d}m{:02d}s{:03d}.{}",
 				hive.prefix,
 				local_time.wYear,
 				local_time.wMonth,
@@ -149,7 +149,7 @@ namespace apn::item_copy
 		//
 		BOOL read_file(const std::wstring& exo_file_name)
 		{
-			auto fp = magi.auin.get_filter_plugin(magi.fp, "拡張編集");
+			auto fp = magi.auin.get_filter_plugin(magi.fp, "Advanced Editing");
 			auto editp = magi.exin.get_editp();
 			auto frame = magi.fp->exfunc->get_frame(editp);
 			auto layer = std::max(0, hive.insert_layer - 1);
@@ -624,9 +624,9 @@ namespace apn::item_copy
 		{
 			auto file_name = get_open_file_name(
 				hive.main_window,
-				L"exoファイルを選択",
-				L"exoファイル (*.exo)\0*.exo\0"
-				L"すべてのファイル (*.*)\0*.*\0",
+				L"Select exo file",
+				L"exo Files (*.exo)\0*.exo\0"
+				L"All Files (*.*)\0*.*\0",
 				hive.exo_file_name.c_str());
 			if (file_name.empty()) return FALSE;
 
@@ -642,9 +642,9 @@ namespace apn::item_copy
 		{
 			auto file_name = get_save_file_name(
 				hive.main_window,
-				L"exoファイルを選択",
-				L"exoファイル (*.exo)\0*.exo\0"
-				L"すべてのファイル (*.*)\0*.*\0",
+				L"Select exo file",
+				L"exo Files (*.exo)\0*.exo\0"
+				L"All Files (*.*)\0*.*\0",
 				hive.exo_file_name.c_str(),
 				L"exo");
 			if (file_name.empty()) return FALSE;

@@ -100,24 +100,24 @@ namespace apn::filer
 
 				// 読み込み可能なフィルタかチェックします。
 				if (name.empty()) continue;
-				else if (name == "動画ファイル") continue;
-				else if (name == "画像ファイル") continue;
-				else if (name == "音声ファイル") continue;
-				else if (name == "テキスト") continue;
-				else if (name == "図形") continue;
-				else if (name == "フレームバッファ") continue;
-				else if (name == "音声波形") continue;
-				else if (name == "シーン") continue;
-				else if (name == "シーン(音声)") continue;
-				else if (name == "直前オブジェクト") continue;
-				else if (name == "標準描画") continue;
-				else if (name == "拡張描画") continue;
-				else if (name == "標準再生") continue;
-				else if (name == "パーティクル出力") continue;
-				else if (name == "カスタムオブジェクト") continue;
-				else if (name == "時間制御") continue;
-				else if (name == "グループ制御") continue;
-				else if (name == "カメラ制御") continue;
+				else if (name == "Video file") continue;
+				else if (name == "Image file") continue;
+				else if (name == "Audio file") continue;
+				else if (name == "Text") continue;
+				else if (name == "Graphic") continue;
+				else if (name == "Frame buffer") continue;
+				else if (name == "Audio waveform buffer") continue;
+				else if (name == "Scene") continue;
+				else if (name == "Scene (audio)") continue;
+				else if (name == "Previous object") continue;
+				else if (name == "Standard drawing") continue;
+				else if (name == "Advanced drawing") continue;
+				else if (name == "Standard playback") continue;
+				else if (name == "Particle output") continue;
+				else if (name == "Custom object") continue;
+				else if (name == "Time control") continue;
+				else if (name == "Group control") continue;
+				else if (name == "Camera conrol") continue;
 
 				// セクションデータを取得します。
 				section.clear();
@@ -194,32 +194,32 @@ namespace apn::filer
 
 					switch (type)
 					{
-					case 0x00: name = "震える"; break;
-					case 0x01: name = "振り子"; break;
-					case 0x02: name = "弾む"; break;
-					case 0x03: name = "座標の拡大縮小(個別オブジェクト)"; break;
-					case 0x04: name = "画面外から登場"; break;
-					case 0x05: name = "ランダム方向から登場"; break;
-					case 0x06: name = "拡大縮小して登場"; break;
-					case 0x07: name = "ランダム間隔で落ちながら登場"; break;
-					case 0x08: name = "弾んで登場"; break;
-					case 0x09: name = "広がって登場"; break;
-					case 0x0A: name = "起き上がって登場"; break;
-					case 0x0B: name = "何処からともなく登場"; break;
-					case 0x0C: name = "反復移動"; break;
-					case 0x0D: name = "座標の回転(個別オブジェクト)"; break;
-					case 0x0E: name = "立方体(カメラ制御)"; break;
-					case 0x0F: name = "球体(カメラ制御)"; break;
-					case 0x10: name = "砕け散る"; break;
-					case 0x11: name = "点滅"; break;
-					case 0x12: name = "点滅して登場"; break;
-					case 0x13: name = "簡易変形"; break;
-					case 0x14: name = "簡易変形(カメラ制御)"; break;
-					case 0x15: name = "リール回転"; break;
-					case 0x16: name = "万華鏡"; break;
-					case 0x17: name = "円形配置"; break;
-					case 0x18: name = "ランダム配置"; break;
-					default: name = "アニメーション効果"; break;
+					case 0x00: name = "Trembling"; break;
+					case 0x01: name = "Pendulum"; break;
+					case 0x02: name = "Bounce"; break;
+					case 0x03: name = "Scale coordinate(as Individual object)"; break;
+					case 0x04: name = "Appeared from off-screen"; break;
+					case 0x05: name = "Appeared from random direction"; break;
+					case 0x06: name = "Appear while scaling"; break;
+					case 0x07: name = "Appear while falling at random interval"; break;
+					case 0x08: name = "Appeare with bounce"; break;
+					case 0x09: name = "Appear spreading"; break;
+					case 0x0A: name = "Appear while rising up"; break;
+					case 0x0B: name = "Appear from nowhere"; break;
+					case 0x0C: name = "Repetitive"; break;
+					case 0x0D: name = "Rotation of the coordinate (individual objects)"; break;
+					case 0x0E: name = "Cube (camera control)"; break;
+					case 0x0F: name = "Sphere (camera control)"; break;
+					case 0x10: name = "Shatter"; break;
+					case 0x11: name = "Blinking"; break;
+					case 0x12: name = "Appear while blinking"; break;
+					case 0x13: name = "Simple deformation"; break;
+					case 0x14: name = "Simple deformation (camera control)"; break;
+					case 0x15: name = "Reel rotation"; break;
+					case 0x16: name = "Kaleidoscope"; break;
+					case 0x17: name = "Circular arrangement"; break;
+					case 0x18: name = "Random location"; break;
+					default: name = "Animation effect"; break;
 					}
 				}
 				return name;
@@ -228,7 +228,7 @@ namespace apn::filer
 			{
 				auto exdata = magi.exin.get_exdata(object, filter_index);
 				auto name = (LPCSTR)(exdata + 0x04);
-				if (!name[0]) name = "カスタムオブジェクト";
+				if (!name[0]) name = "Custom object";
 				return name;
 			}
 			else
@@ -279,21 +279,21 @@ namespace apn::filer
 				{
 				case -2:
 					{
-						title = std::format("オブジェクトの保存");
+						title = std::format("Save Objects");
 						file_name = std::format("{}.exa", name);
 
 						break;
 					}
 				case -1:
 					{
-						title = std::format("全フィルタの保存");
-						file_name = std::format("{}のフィルタ全体.exa", object->dispname);
+						title = std::format("Save All Filters");
+						file_name = std::format("Whole filter for {}.exa", object->dispname);
 
 						break;
 					}
 				default:
 					{
-						title = std::format("フィルタの保存");
+						title = std::format("Save Filters");
 						file_name = std::format("{}.exa", name);
 
 						break;
@@ -318,7 +318,7 @@ namespace apn::filer
 			ofn.lpstrInitialDir = folder_name.c_str();
 			ofn.lpstrFile = file_name.data();
 			ofn.nMaxFile = file_name.size();
-			ofn.lpstrFilter = "エイリアスファイル (*.exa)\0*.exa\0" "すべてのファイル (*.*)\0*.*\0";
+			ofn.lpstrFilter = "Alias Files (*.exa)\0*.exa\0" "All Files (*.*)\0*.*\0";
 			ofn.lpstrDefExt = "exa";
 
 			if (!::GetSaveFileNameA(&ofn))

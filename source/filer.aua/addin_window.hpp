@@ -48,7 +48,7 @@ namespace apn::filer
 					// アドインダイアログを初期化します。
 					if (!addin_dialog.init(hwnd))
 					{
-						hive.message_box(L"アドインダイアログの初期化に失敗しました");
+						hive.message_box(L"Add-in dialog initialization failed");
 						return -1;
 					}
 

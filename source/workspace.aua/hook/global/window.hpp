@@ -55,7 +55,7 @@ namespace apn::workspace::hook::global
 				{
 					if (!hive.aviutl_window) hive.aviutl_window = hwnd;
 				}
-				else if (window_name == _T("拡張編集"))
+				else if (window_name == _T("Advanced Editing"))
 				{
 					if (!hive.exedit_window) hive.exedit_window = hwnd;
 				}

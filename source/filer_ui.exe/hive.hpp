@@ -8,7 +8,7 @@ namespace apn::filer_ui
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"filer_ui";
-		inline static constexpr auto c_display_name = L"ファイラのUI";
+		inline static constexpr auto c_display_name = L"Filer UI";
 
 		inline static constexpr struct TimerID {
 			inline static constexpr uint32_t c_check_host_window = 1000;

@@ -60,14 +60,14 @@ namespace apn::workspace
 			auto w = my::get_width(pane->position);
 			auto h = my::get_height(pane->position);
 
-			init_combobox(IDC_PANE_ORIGIN, _T("左上"), _T("右下"));
-			init_combobox(IDC_CAPTION_MODE, _T("非表示"), _T("表示"));
-			init_combobox(IDC_CAPTION_LOCATION, _T("左辺"), _T("上辺"), _T("右辺"), _T("下辺"));
-			init_combobox(IDC_TAV_DISPLAY_MODE, _T("デフォルト"), _T("手動"), _T("半自動"), _T("自動"), _T("全自動"));
-			init_combobox(IDC_TAV_SELECT_MODE, _T("デフォルト"), _T("クリック"), _T("ホバー"));
-			init_combobox(IDC_TAV_STRETCH_MODE, _T("デフォルト"), _T("内側"), _T("外側"));
-			init_combobox(IDC_TAV_LOCATION, _T("デフォルト"), _T("左辺"), _T("上辺"), _T("右辺"), _T("下辺"));
-			init_combobox(IDC_TAV_NODE_ALIGN, _T("デフォルト"), _T("左または上"), _T("右または下"), _T("中央"));
+			init_combobox(IDC_PANE_ORIGIN, _T("Top Left"), _T("Bottom Right"));
+			init_combobox(IDC_CAPTION_MODE, _T("Hidden"), _T("Visible"));
+			init_combobox(IDC_CAPTION_LOCATION, _T("Left"), _T("Top"), _T("Right"), _T("Bottom"));
+			init_combobox(IDC_TAV_DISPLAY_MODE, _T("Default"), _T("Manual"), _T("Semi-Auto"), _T("Auto"), _T("Full Auto"));
+			init_combobox(IDC_TAV_SELECT_MODE, _T("Default"), _T("Click"), _T("Hover"));
+			init_combobox(IDC_TAV_STRETCH_MODE, _T("Default"), _T("Inside"), _T("Outside"));
+			init_combobox(IDC_TAV_LOCATION, _T("Default"), _T("Left"), _T("Top"), _T("Right"), _T("Bottom"));
+			init_combobox(IDC_TAV_NODE_ALIGN, _T("Default"), _T("Left or Top"), _T("Right or Bottom"), _T("Center"));
 
 			set_int(IDC_PANE_X, x);
 			set_int(IDC_PANE_Y, y);

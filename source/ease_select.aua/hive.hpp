@@ -8,7 +8,7 @@ namespace apn::ease_select
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"ease_select";
-		inline static constexpr auto c_display_name = L"イージング選択";
+		inline static constexpr auto c_display_name = L"Easing Select";
 
 		//
 		// このアドインのインスタンスハンドルです。

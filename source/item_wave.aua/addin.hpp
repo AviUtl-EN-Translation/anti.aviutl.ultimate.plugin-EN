@@ -38,8 +38,8 @@ namespace apn::item_wave
 				if (!std::filesystem::exists(path))
 				{
 					hive.message_box(
-						L"pluginsフォルダにlwinput.auiが存在しません\n"
-						L"L-SMASH-Worksをpluginsフォルダにインストールしてください\n"
+						L"lwinput.aui does not exist in plugins folder\n"
+						L"Install L-SMASH-Works in the plugins folder\n"
 					);
 
 					return FALSE;

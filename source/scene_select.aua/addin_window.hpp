@@ -299,9 +299,9 @@ namespace apn::scene_select
 
 			my::menu::unique_ptr<> menu(::CreatePopupMenu());
 
-			::AppendMenu(menu.get(), MF_STRING, hive.c_command_id.c_scene_config, _T("シーンの設定"));
+			::AppendMenu(menu.get(), MF_STRING, hive.c_command_id.c_scene_config, _T("Scene settings"));
 			::AppendMenu(menu.get(), MF_SEPARATOR, 0, nullptr);
-			::AppendMenu(menu.get(), MF_STRING, hive.c_command_id.c_config, _T("シーン選択の設定"));
+			::AppendMenu(menu.get(), MF_STRING, hive.c_command_id.c_config, _T("Scene selection settings"));
 
 			auto point = my::get_cursor_pos();
 			auto id = ::TrackPopupMenuEx(menu.get(),
@@ -525,7 +525,7 @@ namespace apn::scene_select
 							if (is_available(drag_button) && drag_button != magi.exin.get_current_scene_index())
 							{
 								// ボタンが押されたのでシーンを変更します。
-								magi.exin.set_scene(drag_button, magi.auin.get_filter_plugin(magi.fp, "拡張編集"), magi.exin.get_editp());
+								magi.exin.set_scene(drag_button, magi.auin.get_filter_plugin(magi.fp, "Advanced Editing"), magi.exin.get_editp());
 
 								// AviUtlのプレビューウィンドウを再描画します。
 								magi.redraw();
@@ -603,8 +603,8 @@ namespace apn::scene_select
 								auto height = scene_setting->height;
 								auto has_alpha = !!(scene_setting->flag & ExEdit::SceneSetting::Flag::Alpha);
 								auto name_string = name ? my::format(_T("\"{}\""), name) : my::format(_T("Scene {}"), hot_button);
-								auto size_string = (width && height) ? my::format(_T("{} x {}"), width, height) : my::format(_T("デフォルトサイズ"));
-								auto has_alpha_string = has_alpha ? _T("アルファあり") : _T("アルファなし");
+								auto size_string = (width && height) ? my::format(_T("{} x {}"), width, height) : my::format(_T("Default size"));
+								auto has_alpha_string = has_alpha ? _T("With alpha") : _T("Without alpha");
 								::SetWindowText(hwnd, my::format(_T("{} {} - {} - {}"),
 									hive.c_display_name, name_string, size_string, has_alpha_string).c_str());
 							}
@@ -655,8 +655,8 @@ namespace apn::scene_select
 				::SendDlgItemMessage(*this, IDC_WRAP_SPIN, UDM_SETRANGE32, 1, 50);
 				::SendDlgItemMessage(*this, IDC_BUTTON_COUNT_SPIN, UDM_SETRANGE32, 1, 50);
 
-				init_combobox(IDC_SIZE_MODE, _T("可変サイズ"), _T("固定サイズ"));
-				init_combobox(IDC_LAYOUT_MODE, _T("水平方向"), _T("垂直方向"));
+				init_combobox(IDC_SIZE_MODE, _T("Variable size"), _T("Fixed size"));
+				init_combobox(IDC_LAYOUT_MODE, _T("Horizontal"), _T("Vertical"));
 
 				bind_combobox_index(IDC_SIZE_MODE, hive.size_mode);
 				bind_combobox_index(IDC_LAYOUT_MODE, hive.layout_mode);

@@ -50,8 +50,8 @@ namespace apn
 		{
 			MY_TRACE_FUNC("{:#010x}, {:#010x}", instance, parent);
 
-			// 初期化中にエディットボックスがコマンドを発行してしまうので、
-			// それを防ぐためにロックしておきます。
+			// The edit box issues the command during initialization,
+			// I will lock it to prevent it.
 			Locker locker(this);
 
 			return __super::create(instance, MAKEINTRESOURCE(dialog_id), parent);

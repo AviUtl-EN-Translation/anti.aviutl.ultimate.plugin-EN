@@ -134,7 +134,7 @@ namespace apn::workspace
 
 				MY_TRACE("拡張編集ウィンドウ用のシャトルを初期化します\n");
 
-				exedit_window->init(_T("* 拡張編集"), hwnd);
+				exedit_window->init(_T("* Advanced Editing"), hwnd);
 
 				return TRUE;
 			}
@@ -145,7 +145,7 @@ namespace apn::workspace
 
 				MY_TRACE("設定ダイアログ用のシャトルを初期化します\n");
 
-				setting_dialog->init(_T("* 設定ダイアログ"), hwnd);
+				setting_dialog->init(_T("* Configuration Dialog"), hwnd);
 
 				return TRUE;
 			}
@@ -155,7 +155,7 @@ namespace apn::workspace
 				// 拡張編集ウィンドウのダミーかもしれないのでチェックしておきます。
 				if (hwnd == exedit_window->dummy) return FALSE;
 
-				if (window_name == L"再生ウィンドウ")
+				if (window_name == L"Playback window")
 				{
 					if (*player_window) return FALSE;
 
@@ -200,14 +200,13 @@ namespace apn::workspace
 			my::menu::unique_ptr<> menu(::CreatePopupMenu());
 
 			if (hive.use_fullscreen_preview)
-				::AppendMenu(menu.get(), MF_STRING, c_command_id.c_fullscreen_preview, _T("再生時にプレビューを最大化"));
+				::AppendMenu(menu.get(), MF_STRING, c_command_id.c_fullscreen_preview, _T("Maximize preview during playback"));
 
-			::AppendMenu(menu.get(), MF_STRING, c_command_id.c_create_sub_window, _T("サブウィンドウを新規作成"));
-			::AppendMenu(menu.get(), MF_STRING, c_command_id.c_reset_float_shuttles, _T("フローティングウィンドウをリセット"));
-			::AppendMenu(menu.get(), MF_STRING, c_command_id.c_import_layout, _T("レイアウトのインポート"));
-			::AppendMenu(menu.get(), MF_STRING, c_command_id.c_export_layout, _T("レイアウトのエクスポート"));
-			::AppendMenu(menu.get(), MF_STRING, c_command_id.c_show_config_dialog, std::format(_T("『{}』の設定"), hive.c_display_name).c_str());
-			::AppendMenu(menu.get(), MF_SEPARATOR, 0, nullptr);
+			::AppendMenu(menu.get(), MF_STRING, c_command_id.c_create_sub_window, _T("Create new sub-window"));
+			::AppendMenu(menu.get(), MF_STRING, c_command_id.c_reset_float_shuttles, _T("Reset floating windows"));
+			::AppendMenu(menu.get(), MF_STRING, c_command_id.c_import_layout, _T("Import layout"));
+			::AppendMenu(menu.get(), MF_STRING, c_command_id.c_export_layout, _T("Export layout"));
+			::AppendMenu(menu.get(), MF_STRING, c_command_id.c_show_config_dialog, std::format(_T("Settings for 『{}』"), hive.c_display_name).c_str());
 
 			// シャトルメニューはドッキングサイトで構築します。
 			__super::add_shuttle_list(menu.get(), c_command_id.c_shuttle_begin,
@@ -313,7 +312,7 @@ namespace apn::workspace
 			if (editp && editp->frame_n)
 			{
 				auto file_name = std::filesystem::path(editp->project_filename).filename();
-				if (file_name.empty()) file_name = _T("無題");
+				if (file_name.empty()) file_name = _T("Untitled");
 				title = std::format(_T("{} - {}"), file_name.c_str(), orig);
 			}
 			else
@@ -427,7 +426,7 @@ namespace apn::workspace
 		{
 			// 処理を実行するかユーザーに確認します。
 			if (IDOK != hive.message_box(
-				L"すべてのフローティングウィンドウの表示位置をリセットします",
+				L"Reset All Floating Window Display Positions",
 				parent, MB_OKCANCEL | MB_ICONWARNING))
 			{
 				return FALSE;
@@ -774,15 +773,15 @@ namespace apn::workspace
 				bind_uint(IDC_INACTIVE_CAPTION_TEXT_COLOR, hive.inactive_caption_text_color);
 
 				// タブの設定
-				bind_combobox_index(IDC_TAV_DISPLAY_MODE, tav_display_mode, _T("手動"), _T("半自動"), _T("自動"), _T("全自動"));
-				bind_combobox_index(IDC_TAV_SELECT_MODE, tav_select_mode, _T("クリック"), _T("ホバー"));
-				bind_combobox_index(IDC_TAV_STRETCH_MODE, tav_stretch_mode, _T("内側"), _T("外側"));
-				bind_combobox_index(IDC_TAV_LOCATION, tav_location, _T("左辺"), _T("上辺"), _T("右辺"), _T("下辺"));
-				bind_combobox_index(IDC_TAV_NODE_ALIGN, tav_node_align, _T("左または上"), _T("右または下"), _T("中央"));
+bind_combobox_index(IDC_TAV_DISPLAY_MODE, tav_display_mode, _T("Manual"), _T("Semi-auto"), _T("Auto"), _T("Full auto"));
+bind_combobox_index(IDC_TAV_SELECT_MODE, tav_select_mode, _T("Click"), _T("Hover"));
+bind_combobox_index(IDC_TAV_STRETCH_MODE, tav_stretch_mode, _T("Inside"), _T("Outside"));
+bind_combobox_index(IDC_TAV_LOCATION, tav_location, _T("Left"), _T("Top"), _T("Right"), _T("Bottom"));
+bind_combobox_index(IDC_TAV_NODE_ALIGN, tav_node_align, _T("Left/Top"), _T("Right/Bottom"), _T("Center"));
 				bind_uint(IDC_TAB_HEIGHT, hive.tab_height);
 
 				// その他の設定
-				bind_combobox_index(IDC_LAYOUT_LIST_MODE, hive.layout_list_mode, _T("なし"), _T("上"), _T("下"));
+				bind_combobox_index(IDC_LAYOUT_LIST_MODE, hive.layout_list_mode, _T("None"), _T("Up"), _T("Down"));
 				bind_uint(IDC_BORDER_WIDTH, hive.border_width);
 				bind_uint(IDC_CAPTION_HEIGHT, hive.caption_height);
 

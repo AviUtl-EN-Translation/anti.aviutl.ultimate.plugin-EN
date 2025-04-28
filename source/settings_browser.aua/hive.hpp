@@ -8,7 +8,7 @@ namespace apn::settings_browser
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"settings_browser";
-		inline static constexpr auto c_display_name = L"設定ブラウザ";
+		inline static constexpr auto c_display_name = L"Settings Browser";
 
 		//
 		// このアドインのインスタンスハンドルです。

@@ -44,13 +44,13 @@ namespace apn::image_export
 			if (!config_io.init()) return FALSE;
 			if (!addin_window.init()) return FALSE;
 
-			// AviUtlにメニューアイテムを追加します。
-			add_menu_item(fp, L"現在フレームを保存", IDC_EXPORT_FRAME_RGB);
-			add_menu_item(fp, L"現在フレームをアルファ付きで保存", IDC_EXPORT_FRAME_RGBA);
-			add_menu_item(fp, L"選択アイテムを保存", IDC_EXPORT_ITEM_RGB);
-			add_menu_item(fp, L"選択アイテムをアルファ付きで保存", IDC_EXPORT_ITEM_RGBA);
+			// Add menu items to AviUtl.
+			add_menu_item(fp, L"Save current frame", IDC_EXPORT_FRAME_RGB);
+			add_menu_item(fp, L"Save current frame with alpha", IDC_EXPORT_FRAME_RGBA);
+			add_menu_item(fp, L"Save selected item", IDC_EXPORT_ITEM_RGB);
+			add_menu_item(fp, L"Save selected item with alpha", IDC_EXPORT_ITEM_RGBA);
 
-			if (!config_io.read()) MY_TRACE("コンフィグの読み込みに失敗しました\n");
+			if (!config_io.read()) MY_TRACE("Failed to load config\n");
 
 			return FALSE;
 		}

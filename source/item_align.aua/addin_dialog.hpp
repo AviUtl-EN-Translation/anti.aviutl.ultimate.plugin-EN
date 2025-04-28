@@ -92,7 +92,7 @@ namespace apn::item_align
 		{
 			MY_TRACE_FUNC("");
 
-			init_combobox(IDC_SUB_TIME_MODE, _T("なし"), _T("フレーム"), _T("BPM"));
+			init_combobox(IDC_SUB_TIME_MODE, _T("None"), _T("Frame"), _T("BPM"));
 
 			using namespace my::layout;
 

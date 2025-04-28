@@ -8,7 +8,7 @@ namespace apn::local_web_app
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"local_web_app";
-		inline static constexpr auto c_display_name = L"ローカルウェブアプリ";
+		inline static constexpr auto c_display_name = L"Local Web App";
 
 		//
 		// インスタンスハンドルです。

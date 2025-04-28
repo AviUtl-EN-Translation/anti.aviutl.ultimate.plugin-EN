@@ -8,7 +8,7 @@ namespace apn::font_select
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"font_select";
-		inline static constexpr auto c_display_name = L"フォント選択";
+		inline static constexpr auto c_display_name = L"Font Select";
 
 		//
 		// この構造体はフォントメニュー用のデータを保持します。
@@ -42,7 +42,7 @@ namespace apn::font_select
 		std::wstring config_file_name;
 
 		//
-		// このアドインのメインウィンドウです。
+		// This is the main window for this add-in.
 		//
 		HWND main_window = nullptr;
 
@@ -59,7 +59,7 @@ namespace apn::font_select
 		//
 		// プレビュー用のサンプル文字列です。
 		//
-		std::wstring sample = L"サンプル0123456789";
+		std::wstring sample = L"Sample0123456789";
 
 		//
 		// TRUEの場合はフォント名とサンプルをまとめて表示します。
@@ -77,7 +77,7 @@ namespace apn::font_select
 		BOOL use_backward = TRUE;
 
 		//
-		// TRUEの場合は進むボタンを使用します。
+		// For TRUE, use the Proceed button.
 		//
 		BOOL use_forward = TRUE;
 

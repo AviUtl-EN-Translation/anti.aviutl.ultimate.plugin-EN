@@ -3,7 +3,7 @@
 namespace apn::workspace::hook
 {
 	//
-	// このクラスはjumpbarx.aufをフックします。
+	// This class hooks jumpbarx.auf.
 	//
 	inline struct : Entity {
 		//
@@ -16,10 +16,10 @@ namespace apn::workspace::hook
 
 				auto result = orig_proc(rc, style | WS_CAPTION, menu, ex_style);
 
-				if (auto shuttle = shuttle_manager.get(L"ジャンプバー＋"))
+				if (auto shuttle = shuttle_manager.get(L"Jump Bar＋"))
 				{
-					// ここで一旦フローティングコンテナのサイズを大きくします。
-					// こうしないと何故かフローティングコンテナのサイズが不正になります。
+					// Increase the size of the floating container here.
+					// Otherwise, the floating container size will be incorrect for some reason.
 					::SetWindowPos(*shuttle->float_container, nullptr,
 						0, 0, 800, 100, SWP_NOMOVE | SWP_NOZORDER | SWP_NOACTIVATE | SWP_FRAMECHANGED);
 				}

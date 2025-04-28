@@ -227,13 +227,13 @@ namespace apn::font_tree
 			my::menu::unique_ptr<> menu(::CreatePopupMenu());
 
 			::AppendMenu(menu.get(), MF_STRING, c_insert,
-				my::format(_T("選択中の\"{}\"の子要素として\"{}\"を追加"), node->display_name, font_name).c_str());
+				my::format(_T("Add \"{}\" as a child element of selected \"{}\""), font_name, node->display_name).c_str());
 			::AppendMenu(menu.get(), MF_STRING, c_erase,
-				my::format(_T("選択中の\"{}\"を削除"), node->display_name).c_str());
+				my::format(_T("Delete selected \"{}\""), node->display_name).c_str());
 			::AppendMenu(menu.get(), MF_STRING, c_replace_name,
-				my::format(_T("選択中の\"{}\"のフォント名を\"{}\"で置き換える"), node->display_name, font_name).c_str());
+				my::format(_T("Replace the font name of selected \"{}\" with \"{}\""), node->display_name, font_name).c_str());
 			::AppendMenu(menu.get(), MF_STRING, c_erase_name,
-				my::format(_T("選択中の\"{}\"のフォント名を消去する"), node->display_name).c_str());
+				my::format(_T("Clear the font name of selected \"{}\""), node->display_name).c_str());
 
 			auto id = ::TrackPopupMenuEx(menu.get(),
 				TPM_NONOTIFY | TPM_RETURNCMD, point.x, point.y, hwnd, nullptr);

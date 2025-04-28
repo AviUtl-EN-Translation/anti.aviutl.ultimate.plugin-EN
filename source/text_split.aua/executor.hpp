@@ -258,7 +258,7 @@ namespace apn::text_split
 			if (!first_filter) return FALSE;
 
 			// 最初のフィルタがテキストではない場合は
-			if (std::string(first_filter->name) != "テキスト")
+			if (std::string(first_filter->name) != "Text")
 				return FALSE; // 選択アイテムがテキストアイテムではなかったので終了します。
 
 			init_temp_file_name();
@@ -294,10 +294,10 @@ namespace apn::text_split
 			// _nameをチェックします。
 			auto _name = read_private_profile_string(temp_file_name, first_filter_app_name, "_name");
 			MY_TRACE_STR(_name);
-			if (_name != "テキスト") return FALSE; // テキストアイテムではなかったので終了します。
+			if (_name != "Text") return FALSE; // テキストアイテムではなかったので終了します。
 
 			// テキストアイテムの属性を取得します。
-			item.font.size = read_private_profile_int(temp_file_name, first_filter_app_name, "サイズ", 1);
+			item.font.size = read_private_profile_int(temp_file_name, first_filter_app_name, "Size", 1);
 			item.font.bold = read_private_profile_int(temp_file_name, first_filter_app_name, "B", FALSE);
 			item.font.italic = read_private_profile_int(temp_file_name, first_filter_app_name, "I", FALSE);
 			item.font.align = read_private_profile_int(temp_file_name, first_filter_app_name, "align", 0);
@@ -323,8 +323,8 @@ namespace apn::text_split
 				auto _name = read_private_profile_string(temp_file_name, app_name, "_name");
 				MY_TRACE_STR(_name);
 
-				// 標準描画でも拡張描画でもない場合は
-				if (_name != "標準描画" && _name != "拡張描画")
+				// If it's not a standard drawing or an extended drawing
+				if (_name != "Standard drawing" && _name != "Advanced drawing")
 					continue; // スキップします。
 
 				// XとYを取得します。

@@ -8,7 +8,7 @@ namespace apn
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"ultimate.auf";
-		inline static constexpr auto c_display_name = L"アルティメットプラグイン";
+		inline static constexpr auto c_display_name = L"Ultimate Plugin";
 
 		//
 		// このクラスはアドイン情報です。

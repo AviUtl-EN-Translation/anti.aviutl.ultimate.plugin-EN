@@ -29,7 +29,7 @@ namespace apn::item_wave::ui
 
 			if (!ui_window.init())
 			{
-				hive.message_box(L"UIウィンドウの初期化に失敗しました");
+				hive.message_box(L"UI Window Initialization Failed");
 
 				return FALSE;
 			}
@@ -37,7 +37,7 @@ namespace apn::item_wave::ui
 			// 共有メモリを初期化します。
 			if (!share_manager.init())
 			{
-				hive.message_box(L"共有メモリの初期化に失敗しました");
+				hive.message_box(L"Failed to initialize shared memory");
 
 				return FALSE;
 			}

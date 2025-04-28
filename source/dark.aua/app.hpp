@@ -280,7 +280,7 @@ namespace apn::dark
 			auto skin_module_name = get_module_name(hive.skin_list, hive.skin_name);
 			if (skin_module_name.empty())
 			{
-				std::wcout << std::format(L"{}スキンが見つかりませんでした", hive.skin_name) << std::endl;
+				std::wcout << std::format(L"Could not find skin {}", hive.skin_name) << std::endl;
 
 				return FALSE;
 			}
@@ -289,7 +289,7 @@ namespace apn::dark
 			auto scheme_module_name = get_module_name(hive.scheme_list, hive.scheme_name);
 			if (scheme_module_name.empty())
 			{
-				std::wcout << std::format(L"{}スキームが見つかりませんでした", hive.scheme_name) << std::endl;
+				std::wcout << std::format(L"Could not find scheme {}", hive.scheme_name) << std::endl;
 
 				return FALSE;
 			}

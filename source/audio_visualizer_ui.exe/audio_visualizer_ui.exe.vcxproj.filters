@@ -48,7 +48,4 @@
       <Filter>framework</Filter>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
-  </ItemGroup>
 </Project>

@@ -8,7 +8,7 @@ namespace apn::scene_select
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"scene_select";
-		inline static constexpr auto c_display_name = L"シーン選択";
+		inline static constexpr auto c_display_name = L"Scene Select";
 
 		inline static constexpr struct CommandID {
 			inline static constexpr uint32_t c_config = 2024;

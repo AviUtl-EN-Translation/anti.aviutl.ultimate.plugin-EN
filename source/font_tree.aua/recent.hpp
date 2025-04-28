@@ -111,7 +111,7 @@ namespace apn::font_tree
 				if (cb::find_string(*this, font_name.c_str()) < 0)
 				{
 					::AppendMenu(menu.get(), MF_STRING, c_insert_recent,
-						my::format(_T("{}を追加"), font_name).c_str());
+						my::format(_T("Add {}"), font_name).c_str());
 				}
 			}
 
@@ -119,13 +119,13 @@ namespace apn::font_tree
 			if (recent_font_name.length())
 			{
 				::AppendMenu(menu.get(), MF_STRING, c_erase_recent,
-					my::format(_T("{}を削除"), recent_font_name).c_str());
+					my::format(_T("Delete {}"), recent_font_name).c_str());
 			}
 
 			if (::GetMenuItemCount(menu.get()))
 				::AppendMenu(menu.get(), MF_SEPARATOR, 0, nullptr);
-			::AppendMenu(menu.get(), MF_STRING, c_show_config_dialog, _T("フォントツリーの設定"));
-			::AppendMenu(menu.get(), MF_STRING, c_read_xml, _T("xmlファイル(旧形式データ)を読み込む"));
+			::AppendMenu(menu.get(), MF_STRING, c_show_config_dialog, _T("Font tree setting"));
+			::AppendMenu(menu.get(), MF_STRING, c_read_xml, _T("Load xml file (old format data)"));
 
 			auto id = ::TrackPopupMenuEx(menu.get(),
 				TPM_NONOTIFY | TPM_RETURNCMD, point.x, point.y, hwnd, nullptr);

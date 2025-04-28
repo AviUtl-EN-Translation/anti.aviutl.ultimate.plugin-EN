@@ -8,7 +8,7 @@ namespace apn::font_preview
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"font_preview";
-		inline static constexpr auto c_display_name = L"フォントプレビュー";
+		inline static constexpr auto c_display_name = L"Font Preview";
 
 		//
 		// このアドインのインスタンスハンドルです。
@@ -43,7 +43,7 @@ namespace apn::font_preview
 		//
 		// プレビュー用のサンプル文字列です。
 		//
-		std::wstring sample = L"サンプル0123456789";
+		std::wstring sample = L"Sample0123456789";
 
 		//
 		// TRUEの場合はフォント名とサンプルをまとめて表示します。

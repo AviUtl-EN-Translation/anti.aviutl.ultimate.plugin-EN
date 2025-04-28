@@ -141,7 +141,7 @@ namespace apn::one_for_text
 			}
 			catch (const std::exception& e)
 			{
-				hive.message_box(my::format(L"ファイルの書き込みに失敗しました\n{}", e.what()));
+				hive.message_box(my::format(L"Failed to write file\n{}", e.what()));
 
 				return FALSE;
 			}
@@ -279,7 +279,7 @@ namespace apn::one_for_text
 			{
 				// 処理を続けるかユーザーに問い合わせます。
 				if (IDOK != hive.message_box(
-					L"変更を適用できないオブジェクトが存在します\n処理を続けますか？",
+					L"An object exists that cannot apply changes\nDo you want to continue processing?",
 					nullptr, MB_OKCANCEL | MB_ICONWARNING))
 				{
 					return FALSE;
@@ -354,8 +354,8 @@ namespace apn::one_for_text
 
 			// 処理結果をユーザーに通知します。
 			hive.message_box(my::format(
-				L"{}個のテキストを変更しました\n"
-				L"{}個のテキストは変更しませんでした",
+				L"Modified {} texts\n"
+				L"{} texts were not modified",
 				modified_count, unmodified_count));
 
 			return TRUE;
@@ -393,7 +393,7 @@ namespace apn::one_for_text
 			}
 			catch (const std::exception& e)
 			{
-				hive.message_box(my::format(L"ファイルの読み込みに失敗しました\n{}", e.what()));
+				hive.message_box(my::format(L"Failed to load file\n{}", e.what()));
 
 				return FALSE;
 			}

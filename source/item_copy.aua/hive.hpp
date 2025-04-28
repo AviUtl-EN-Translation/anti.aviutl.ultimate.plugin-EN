@@ -8,7 +8,7 @@ namespace apn::item_copy
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"item_copy";
-		inline static constexpr auto c_display_name = L"アイテムコピー";
+		inline static constexpr auto c_display_name = L"Item Copy";
 
 		inline static constexpr struct FileSplitMode {
 			inline static constexpr int32_t c_none = 0;

@@ -8,7 +8,7 @@ namespace apn::item_align
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"item_align";
-		inline static constexpr auto c_display_name = L"アイテム整列";
+		inline static constexpr auto c_display_name = L"Item Align";
 
 		inline static constexpr struct SubTimeMode {
 			inline static constexpr int32_t c_none = 0;

@@ -95,7 +95,7 @@ namespace apn::workspace
 		{
 			for (size_t i = 0; TRUE; i++)
 			{
-				auto name = std::format(L"サブ{}", i + 1);
+				auto name = std::format(L"Sub {}", i + 1);
 				MY_TRACE_STR(name);
 
 				if (!shuttle_manager.get(name)) return name;
@@ -151,7 +151,7 @@ namespace apn::workspace
 
 			// フローティングコンテナのシステムメニューに項目を追加します。
 			auto menu = ::GetSystemMenu(*float_container, FALSE);
-			::InsertMenu(menu, 0, MF_BYPOSITION | MF_STRING, c_command_id.c_rename_sub_window, _T("名前を変更"));
+			::InsertMenu(menu, 0, MF_BYPOSITION | MF_STRING, c_command_id.c_rename_sub_window, _T("Rename"));
 			::InsertMenu(menu, 1, MF_BYPOSITION | MF_SEPARATOR, 0, nullptr);
 
 			// ウィンドウ名の更新を促します。
@@ -267,7 +267,7 @@ namespace apn::workspace
 					MY_TRACE_FUNC("{:#010x}, WM_CREATE, {:#010x}, {:#010x}", hwnd,  wParam, lParam);
 
 					// このウィンドウにカテゴリ名を設定します。
-					::SetProp(hwnd, _T("aviutl.plugin.category_name"), (HANDLE)L"サブウィンドウ");
+					::SetProp(hwnd, _T("aviutl.plugin.category_name"), (HANDLE)L"Sub window");
 
 					break;
 				}
@@ -280,7 +280,7 @@ namespace apn::workspace
 						// Shiftキーが押されている場合はサブウィンドウを削除します。
 
 						// このサブウィンドウを削除していいのかどうかをユーザーに問い合わせます。
-						if (IDYES != hive.message_box(L"サブウィンドウを削除しますか？", hwnd, MB_YESNO))
+						if (IDYES != hive.message_box(L"Do you want to delete the subwindow?", hwnd, MB_YESNO))
 							return 0;
 
 						// ウィンドウを破壊します。

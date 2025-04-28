@@ -8,7 +8,7 @@ namespace apn::filer
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"filer";
-		inline static constexpr auto c_display_name = L"ファイラ";
+		inline static constexpr auto c_display_name = L"Filer";
 
 		struct App {
 			virtual BOOL init() = 0;

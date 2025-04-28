@@ -8,7 +8,7 @@ namespace apn::dialog_position
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"dialog_position";
-		inline static constexpr auto c_display_name = L"ダイアログ位置調整";
+		inline static constexpr auto c_display_name = L"Dialog Position";
 
 		//
 		// このアドインのインスタンスハンドルです。

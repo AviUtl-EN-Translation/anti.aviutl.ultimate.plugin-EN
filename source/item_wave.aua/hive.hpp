@@ -28,7 +28,7 @@ namespace apn::item_wave
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"item_wave";
-		inline static constexpr auto c_display_name = L"アイテム波形";
+		inline static constexpr auto c_display_name = L"Item Wave";
 
 		inline static constexpr struct WaveType {
 			inline static constexpr int32_t c_center = 0;

@@ -2,6 +2,12 @@
 
 namespace apn::font_select
 {
+
+	inline void debug_message_box(LPCWSTR text, LPCWSTR title = L"Debug")
+	{
+		::MessageBoxW(nullptr, text, title, MB_OK | MB_ICONINFORMATION);
+	}
+
 	//
 	// フォントコンボボックスからフォント名のコレクションを作成して返します。
 	//
@@ -9,8 +15,10 @@ namespace apn::font_select
 	{
 		std::vector<std::wstring> collection;
 		auto c = (int32_t)::SendMessageW(font_combobox, CB_GETCOUNT, 0, 0);
+
 		for (decltype(c) i = 0; i < c; i++)
 			collection.emplace_back(my::get_text_from_combobox(font_combobox, i));
+
 		return collection;
 	}
 

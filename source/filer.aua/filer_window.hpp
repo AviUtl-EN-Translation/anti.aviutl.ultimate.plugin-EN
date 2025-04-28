@@ -35,7 +35,7 @@ namespace apn::filer
 				WS_CLIPSIBLINGS | WS_CLIPCHILDREN,
 				rc.left, rc.top, my::get_width(rc), my::get_height(rc)))
 			{
-				hive.message_box(L"{}(ファイラウィンドウ)の作成に失敗しました");
+				hive.message_box(L"{}(filer window) creation failed");
 
 				return nullptr;
 			}

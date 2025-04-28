@@ -35,7 +35,7 @@ namespace apn::settings_browser
 		}
 
 		//
-		// この仮想関数は、ウィンドウの初期化を実行するときに呼ばれます。
+		// This virtual function is called when performing window initialization.
 		//
 		virtual BOOL on_window_init(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam, AviUtl::EditHandle* editp, AviUtl::FilterPlugin* fp) override
 		{
@@ -47,10 +47,10 @@ namespace apn::settings_browser
 			if (!config_io.init()) return FALSE;
 			if (!addin_window.init()) return FALSE;
 
-			// AviUtlにメニューアイテムを追加します。
-			add_menu_item(fp, L"取得", IDC_GET_SETTINGS);
+			// Add menu items to AviUtl.
+			add_menu_item(fp, L"Get", IDC_GET_SETTINGS);
 
-			if (!config_io.read()) MY_TRACE("コンフィグの読み込みに失敗しました\n");
+			if (!config_io.read()) MY_TRACE("Failed to load config\n");
 
 			return FALSE;
 		}

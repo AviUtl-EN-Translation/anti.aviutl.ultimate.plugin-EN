@@ -52,14 +52,14 @@ namespace apn::font_tree
 			// ファイル選択ダイアログ用のバッファを確保します。
 			std::wstring file_name(MAX_PATH, L'\0');
 
-			// ファイル選択ダイアログ用の構造体を設定します。
+			// Configures the structure for the file selection dialog.
 			OPENFILENAMEW ofn = { sizeof(ofn) };
 			ofn.hwndOwner = hive.main_window;
 			ofn.Flags = OFN_FILEMUSTEXIST;
-			ofn.lpstrTitle = L"旧形式のデータをインポート";
+			ofn.lpstrTitle = L"Import old format data";
 			ofn.lpstrFile = file_name.data();
 			ofn.nMaxFile = file_name.size();
-			ofn.lpstrFilter = L"xmlファイル (*.xml)\0*.xml\0" "すべてのファイル (*.*)\0*.*\0";
+			ofn.lpstrFilter = L"xml Files (*.xml)\0*.xml\0" "All files (*.*)\0*.*\0";
 			ofn.lpstrDefExt = L"xml";
 
 			// 初期ディレクトリを設定します。

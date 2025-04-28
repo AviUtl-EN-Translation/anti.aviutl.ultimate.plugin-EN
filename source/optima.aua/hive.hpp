@@ -8,7 +8,7 @@ namespace apn::optima
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"optima";
-		inline static constexpr auto c_display_name = L"最適化";
+		inline static constexpr auto c_display_name = L"Optimization";
 
 		struct Locker {
 			Locker() { hive.lock_count++; }

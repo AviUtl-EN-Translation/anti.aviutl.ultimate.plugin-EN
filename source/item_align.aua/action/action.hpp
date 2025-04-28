@@ -381,7 +381,7 @@ namespace apn::item_align
 				if (mover->after.time_start < 0)
 				{
 					std::format_to(std::back_inserter(error),
-						L"レイヤー{}のオブジェクトの開始位置が不正な値になっています\n",
+						L"The start position of the object in layer {} is invalid\n",
 						mover->after.layer_set + 1);
 
 					continue;
@@ -390,7 +390,7 @@ namespace apn::item_align
 				if (mover->after.time_end < 0)
 				{
 					std::format_to(std::back_inserter(error),
-						L"レイヤー{}のオブジェクトの終了位置が不正な値になっています\n",
+						L"The end position of the object in layer {} is invalid\n",
 						mover->after.layer_set + 1);
 
 					continue;
@@ -399,7 +399,7 @@ namespace apn::item_align
 				if (mover->after.time_start >= mover->after.time_end)
 				{
 					std::format_to(std::back_inserter(error),
-						L"レイヤー{}のオブジェクトの長さが不正な値になっています\n",
+						L"Object length in layer {} is invalid\n",
 						mover->after.layer_set + 1);
 
 					continue;
@@ -427,7 +427,7 @@ namespace apn::item_align
 						node->after.time_end >= mover->after.time_start)
 					{
 						std::format_to(std::back_inserter(error),
-							L"レイヤー{}で[{}]のオブジェクトが交差しています\n",
+							L"Objects overlap in Layer {} [{}]\n",
 							mover->after.layer_set + 1, time_to_str(mover->after.time_start, mover->after.time_end));
 					}
 				}
@@ -445,7 +445,7 @@ namespace apn::item_align
 
 			// 選択オブジェクトが存在しない場合は
 			if (selection.empty())
-				throw std::wstring(L"オブジェクトを選択してください");
+				throw std::wstring(L"Please select an object");
 
 			// アンドゥを作成します。
 			{

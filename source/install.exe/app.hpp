@@ -21,7 +21,7 @@ public:
 
 		if (!main_window.init())
 		{
-			AfxMessageBox(_T("メインウィンドウの初期化に失敗しました"));
+			AfxMessageBox(_T("Failed to initialize main window"));
 
 			return FALSE;
 		}
@@ -64,7 +64,7 @@ public:
 		catch (const std::exception& error)
 		{
 			AfxMessageBox(std::format(
-				L"{}を読込中にエラーが発生しました" L"\n"
+				L"Error loading {}" L"\n"
 				L"{}",
 				hive.config_file_name,
 				my::ws(error.what())).c_str());
@@ -96,7 +96,7 @@ public:
 		catch (const std::exception& error)
 		{
 			AfxMessageBox(std::format(
-				L"{}を保存中にエラーが発生しました" L"\n"
+				L"Error saving {}" L"\n"
 				L"{}",
 				hive.config_file_name,
 				my::ws(error.what())).c_str());
@@ -113,7 +113,7 @@ public:
 		OptionDialog dialog;
 		if (IDOK != dialog.DoModal())
 		{
-			AfxMessageBox(_T("インストールを中止しました"));
+			AfxMessageBox(_T("Installation aborted"));
 
 			return FALSE;
 		}

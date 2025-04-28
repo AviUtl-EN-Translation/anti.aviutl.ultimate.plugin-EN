@@ -87,7 +87,7 @@ namespace apn::note
 			}
 			catch (...)
 			{
-				hive.message_box(L"共通ノートの読み込みに失敗しました");
+				hive.message_box(L"Failed to load sharing notes");
 			}
 
 			return TRUE;

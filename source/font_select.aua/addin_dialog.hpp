@@ -31,7 +31,7 @@ namespace apn::font_select
 		}
 
 		//
-		// コントロールの値を更新します。
+		// Update the value of the control.
 		//
 		BOOL update_controls()
 		{
@@ -99,7 +99,7 @@ namespace apn::font_select
 
 					std::fill(std::begin(colors), std::end(colors), RGB(0xff, 0xff, 0xff));
 
-					init_combobox(IDC_PAINT_MODE, _T("自動"), _T("システムカラー"), _T("テーマ"), _T("カスタムカラー"));
+					init_combobox(IDC_PAINT_MODE, _T("Auto"), _T("System Color"), _T("Theme"), _T("Custom Color"));
 
 					break;
 				}

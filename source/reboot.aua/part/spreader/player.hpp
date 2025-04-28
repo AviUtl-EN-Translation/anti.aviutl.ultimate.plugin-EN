@@ -660,7 +660,7 @@ namespace apn::reboot::spreader
 			if (!agit.movieplaymain)
 			{
 				// 再生ウィンドウを取得します。
-				if (auto filter_plugin = magi.auin.get_filter_plugin(magi.fp, "再生ウィンドウ"))
+				if (auto filter_plugin = magi.auin.get_filter_plugin(magi.fp, "Play window"))
 					agit.preview_window = filter_plugin->hwnd;
 			}
 

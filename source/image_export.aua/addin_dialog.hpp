@@ -49,9 +49,9 @@ namespace apn::image_export
 			quality.init(0, 100, *this, IDC_QUALITY_SLIDER, IDC_QUALITY);
 
 			init_combobox(IDC_MODE,
-				_T("保存の度に選択"),
-				_T("予め指定されたファイルに保存"),
-				_T("予め指定されたファイルに上書き保存"));
+				_T("Select for each save"),
+				_T("Save to pre-specified file"),
+				_T("Save overwrite to pre-specified file"));
 
 			using namespace my::layout;
 
@@ -250,7 +250,7 @@ namespace apn::image_export
 						return file_name; // 自動保存用ファイル名を返します。
 
 					// ファイルを上書きするかどうかをユーザーに確認します。
-					auto str = std::format(L"{}\nはすでに存在します。上書きしますか?", file_name);
+					auto str = std::format(L"{}\nalready exists. Do you want to overwrite it?", file_name);
 					if (IDYES == hive.message_box(str, *this, MB_YESNO))
 						return file_name;
 

@@ -88,8 +88,8 @@ namespace apn::reboot::outputs
 
 			auto aviutl_window = hive.aviutl_window;
 			auto menu = ::GetMenu(aviutl_window);
-			auto file_menu = find_menu(menu, _T("ファイル"));
-			auto output_menu = find_menu(file_menu, _T("プラグイン出力"));
+			auto file_menu = find_menu(menu, _T("File"));
+			auto output_menu = find_menu(file_menu, _T("File output"));
 			auto id = find_menu_item(output_menu, agit.plugin_name.c_str());
 			if (id)
 			{
@@ -99,9 +99,9 @@ namespace apn::reboot::outputs
 			else
 			{
 				hive.message_box(my::format(
-					_T("出力プラグインが見つかりませんでした") _T("\n")
-					_T("現在選択されているプラグイン = 【{}】"),
-					agit.plugin_name.empty() ? _T("なし") : agit.plugin_name));
+					_T("Output plugin not found") _T("\n")
+					_T("Currently selected plug-ins = 【{}】"),
+					agit.plugin_name.empty() ? _T("None") : agit.plugin_name));
 			}
 
 			return TRUE;
@@ -120,8 +120,8 @@ namespace apn::reboot::outputs
 			// ポップアップメニューを取得します。
 			auto aviutl_window = hive.aviutl_window;
 			auto menu = ::GetMenu(aviutl_window);
-			auto file_menu = find_menu(menu, _T("ファイル"));
-			auto output_menu = find_menu(file_menu, _T("プラグイン出力"));
+			auto file_menu = find_menu(menu, _T("File"));
+			auto output_menu = find_menu(file_menu, _T("File output"));
 
 			// ポップアップメニューを表示します。
 			auto id = ::TrackPopupMenuEx(output_menu,

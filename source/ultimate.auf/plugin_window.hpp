@@ -33,14 +33,14 @@ namespace apn
 			if (!listbox.create(
 				WS_EX_CLIENTEDGE,
 				WC_LISTBOX,
-				_T("アドインの一覧"),
+				_T("List of add-ins"),
 				WS_VISIBLE | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN |
 				WS_HSCROLL | WS_VSCROLL |
 				LBS_HASSTRINGS | LBS_NOTIFY | LBS_NOINTEGRALHEIGHT | LBS_MULTICOLUMN | LBS_SORT,
 				rc.left, rc.top, my::get_width(rc), my::get_height(rc),
 				*this, nullptr, nullptr, nullptr))
 			{
-				hive.message_box(_T("アドイン一覧リストボックスの作成に失敗しました"));
+				hive.message_box(_T("Failed to create add-in list box"));
 
 				return FALSE;
 			}

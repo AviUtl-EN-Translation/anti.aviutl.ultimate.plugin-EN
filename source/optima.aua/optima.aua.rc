@@ -13,7 +13,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// 擔杮岅 (擔杮) resources
+// 老夯绢(老夯) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
 LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
@@ -55,7 +55,7 @@ STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | 
 EXSTYLE WS_EX_NOPARENTNOTIFY | WS_EX_CONTROLPARENT
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    CONTROL         "僐儞儃儃僢僋僗傪嵞棙梡偡傞",IDC_REUSE_COMBOBOX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,6,132,18
+    CONTROL         "Reuse a combo box",IDC_REUSE_COMBOBOX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,6,132,18
 END
 
 
@@ -88,7 +88,7 @@ BEGIN
     0
 END
 
-#endif    // 擔杮岅 (擔杮) resources
+#endif    // 老夯绢(老夯) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

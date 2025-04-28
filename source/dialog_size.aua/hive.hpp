@@ -8,7 +8,7 @@ namespace apn::dialog_size
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"dialog_size";
-		inline static constexpr auto c_display_name = L"ダイアログサイズ調整";
+		inline static constexpr auto c_display_name = L"Dialog Size";
 
 		//
 		// このアドインのインスタンスハンドルです。
@@ -33,15 +33,15 @@ namespace apn::dialog_size
 			std::string target_template_name;
 			std::wstring target_display_name;
 		} custom_templates[9] = {
-			{ TRUE, "SYSTEM", L"システムの設定" },
-			{ TRUE, "ENV_CONFIG", L"拡張編集の環境設定" },
-			{ TRUE, "INPUTLIST", L"入力プラグインの優先順位" },
-			{ TRUE, "PRIORITYLIST", L"フィルタプラグインの優先順位" },
-			{ TRUE, "NEW_FILE", L"新規プロジェクトの作成" },
-			{ TRUE, "SAVE_OBJECT", L"エイリアスの作成" },
-			{ TRUE, "GRID_CONFIG", L"グリッドの設定" },
-			{ TRUE, "SCENE_CONFIG", L"シーンの設定" },
-			{ TRUE, "SCRIPT_PARAM", L"スクリプトの設定" },
+			{ TRUE, "SYSTEM", L"SYSTEM SETTINGS" },
+			{ TRUE, "ENV_CONFIG", L"Preferences" },
+			{ TRUE, "INPUTLIST", L"Import Plugins Priority" },
+			{ TRUE, "PRIORITYLIST", L"Filter Order" },
+			{ TRUE, "NEW_FILE", L"Create a New Project" },
+			{ TRUE, "SAVE_OBJECT", L"New Alias" },
+			{ TRUE, "GRID_CONFIG", L"Grid Setting" },
+			{ TRUE, "SCENE_CONFIG", L"Scene Settings" },
+			{ TRUE, "SCRIPT_PARAM", L"Parameter Settings" },
 		};
 
 		//

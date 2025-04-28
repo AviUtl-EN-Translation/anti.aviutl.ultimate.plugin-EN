@@ -203,7 +203,7 @@ namespace apn::workspace
 					MY_TRACE_FUNC("{:#010x}, WM_CREATE, {:#010x}, {:#010x}", hwnd, wParam, lParam);
 
 					// このウィンドウにカテゴリ名を設定します。
-					::SetProp(hwnd, _T("aviutl.plugin.category_name"), (HANDLE)L"サブプロセス");
+					::SetProp(hwnd, _T("aviutl.plugin.category_name"), (HANDLE)L"Sub Proccess");
 
 					// このタイミングではまだサブプロセスウィンドウが
 					// 作成されていないかもしれないので、

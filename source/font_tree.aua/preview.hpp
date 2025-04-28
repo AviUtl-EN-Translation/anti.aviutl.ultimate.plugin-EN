@@ -25,7 +25,7 @@ namespace apn::font_tree
 		//
 		// サンプル文字列の書式です。
 		//
-		std::wstring sample_format = L"プレビュー({})";
+		std::wstring sample_format = L"Preview({})";
 
 		//
 		// 項目の背景色です。

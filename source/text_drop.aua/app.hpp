@@ -128,7 +128,7 @@ namespace apn::text_drop
 			int32_t layer_set,
 			const std::wstring& text)
 		{
-			// `テキスト`フィルタデータを書き込みます。
+			// Write `text` filter data.
 			ofs << std::format("[{}]\r\n", index);
 			ofs << std::format("start={}\r\n", frame_begin + 1);
 			ofs << std::format("end={}\r\n", frame_end);
@@ -136,12 +136,12 @@ namespace apn::text_drop
 			ofs << "overlay=1\r\n";
 			ofs << "camera=0\r\n";
 			ofs << std::format("[{}.0]\r\n", index);
-			ofs << "_name=テキスト\r\n";
-			ofs << "サイズ=34\r\n";
-			ofs << "表示速度=0.0\r\n";
-			ofs << "文字毎に個別オブジェクト=0\r\n";
-			ofs << "移動座標上に表示する=0\r\n";
-			ofs << "自動スクロール=0\r\n";
+			ofs << "_name=Text\r\n";
+			ofs << "Size=34\r\n";
+			ofs << "vDisplay=0.0\r\n";
+			ofs << "1char1obj=0\r\n";
+			ofs << "Show on motoin coordinate=0\r\n";
+			ofs << "Automatic scrolling=0\r\n";
 			ofs << "B=0\r\n";
 			ofs << "I=0\r\n";
 			ofs << "type=0\r\n";
@@ -159,13 +159,13 @@ namespace apn::text_drop
 
 			// `標準描画`フィルタデータを書き込みます。
 			ofs << std::format("[{}.1]\r\n", index);
-			ofs << "_name=標準描画\r\n";
+			ofs << "_name=Standard drawing\r\n";
 			ofs << "X=0.0\r\n";
 			ofs << "Y=0.0\r\n";
 			ofs << "Z=0.0\r\n";
-			ofs << "拡大率=100.00\r\n";
-			ofs << "透明度=0.0\r\n";
-			ofs << "回転=0.00\r\n";
+			ofs << "Zoom%=100.00\r\n";
+			ofs << "Clearness=0.0\r\n";
+			ofs << "Rotation=0.00\r\n";
 			ofs << "blend=0\r\n";
 		}
 
@@ -436,7 +436,7 @@ namespace apn::text_drop
 			// exoファイルを作成します。
 			write_exo(mode, exo_path);
 #if 1
-			auto fp = magi.auin.get_filter_plugin(magi.fp, "拡張編集");
+			auto fp = magi.auin.get_filter_plugin(magi.fp, "Advanced Editing");
 #else
 			auto exedit = magi.exin.get_exedit();
 			auto fp = *(AviUtl::FilterPlugin**)(exedit + 0x0014D4B4);
@@ -459,9 +459,9 @@ namespace apn::text_drop
 			// 読み込み先テキストファイルのパスを取得します。
 			auto file_name = get_open_file_name(
 				hive.main_window,
-				L"テキストファイルを選択",
-				L"テキストファイル (*.txt)\0*.txt\0"
-				L"すべてのファイル (*.*)\0*.*\0",
+				L"Select text files",
+				L"Text files (*.txt)\0*.txt\0"
+				L"All files (*.*)\0*.*\0",
 				hive.text_file_name.c_str());
 			if (file_name.empty()) return FALSE;
 
@@ -514,9 +514,9 @@ namespace apn::text_drop
 		{
 			auto file_name = get_save_file_name(
 				hive.main_window,
-				L"テキストファイルを選択",
-				L"テキストファイル (*.txt)\0*.txt\0"
-				L"すべてのファイル (*.*)\0*.*\0",
+				L"Select text files",
+				L"Text files (*.txt)\0*.txt\0"
+				L"All files (*.*)\0*.*\0",
 				hive.text_file_name.c_str(),
 				L"txt");
 			if (file_name.empty()) return FALSE;

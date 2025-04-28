@@ -196,7 +196,7 @@ namespace apn::item_copy
 		{
 			MY_TRACE_FUNC("");
 
-			init_combobox(IDC_FILE_SPLIT_MODE, _T("一括"), _T("アイテム毎exo"), _T("アイテム毎exa"));
+			init_combobox(IDC_FILE_SPLIT_MODE, _T("Batch"), _T("Per Item exo"), _T("Per Item exa"));
 
 			using namespace my::layout;
 

@@ -144,7 +144,8 @@ namespace apn::font_tree
 
 									if (ignore_sel_changed) // フラグが立っている場合は何もしません。
 									{
-										MY_TRACE("TVN_SELCHANGEDを無視します\n");
+										MY_TRACE(
+										);
 
 										break;
 									}

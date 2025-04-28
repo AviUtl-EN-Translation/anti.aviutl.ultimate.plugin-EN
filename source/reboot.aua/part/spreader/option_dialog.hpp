@@ -15,7 +15,7 @@ namespace apn::reboot::spreader
 			// ダイアログを作成します。
 			create(hive.instance, MAKEINTRESOURCE(IDD_SPREADER_OPTION), parent);
 
-			init_combobox(IDC_SPREADER_SIZE_MODE, _T("相対サイズを使用"), _T("絶対サイズを使用"));
+			init_combobox(IDC_SPREADER_SIZE_MODE, _T("Use relative size"), _T("Use absolute size"));
 
 			bind_combobox_index(IDC_SPREADER_SIZE_MODE, agit.size_mode);
 			bind_int(IDC_SPREADER_ABSOLUTE_SIZE_W, agit.absolute_size.cx);

@@ -145,7 +145,7 @@ namespace apn::dark
 
 				// pythonでエラーが発生したので
 				// メッセージボックスでエラーメッセージを表示します。
-				hive.message_box(std::format(L"配色の取得に失敗しました\n\n{}", what));
+				hive.message_box(std::format(L"Failed to get color scheme\n\n{}", what));
 			}
 
 			return FALSE;

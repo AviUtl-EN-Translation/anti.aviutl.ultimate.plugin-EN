@@ -8,7 +8,7 @@ namespace apn::namecage
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"namecage";
-		inline static constexpr auto c_display_name = L"アイテム名常時表示";
+		inline static constexpr auto c_display_name = L"Always Display Item Name";
 
 		//
 		// このアドインのインスタンスハンドルです。

@@ -1,6 +1,6 @@
 ﻿//{{NO_DEPENDENCIES}}
-// Microsoft Visual C++ で生成されたインクルード ファイル。
-// color_code_aua.rc で使用
+// Microsoft Visual C++에서 생성한 포함 파일입니다.
+// color_code.aua.rc에서 사용되고 있습니다.
 //
 #define IDC_COLOR_CODE                  174
 

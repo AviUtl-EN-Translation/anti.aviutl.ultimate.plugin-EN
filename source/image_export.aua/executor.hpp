@@ -107,11 +107,11 @@ namespace apn::image_export
 
 			auto fp = magi.fp;
 			auto editp = magi.exin.get_editp();
-			if (!fp || !editp) throw L"必要な変数を取得できませんでした";
-			if (!fp->exfunc->is_editing(editp)) throw L"編集中で画像を読み取ることができませんでした";
+			if (!fp || !editp) throw L"Failed to get required variable";
+			if (!fp->exfunc->is_editing(editp)) throw L"Could not read image while editing";
 
-			auto exedit = magi.auin.get_filter_plugin(fp, "拡張編集");
-			if (!exedit) throw L"拡張編集を取得できませんでした";
+			auto exedit = magi.auin.get_filter_plugin(fp, "Advanced Editing");
+			if (!exedit) throw L"Failed to retrieve extension edits";
 
 			// フレーム番号を取得します。
 			int32_t frame = fp->exfunc->get_frame(editp);
@@ -212,10 +212,10 @@ namespace apn::image_export
 				visual.h = std::min(visual.h, height - visual.y);
 
 				if (visual.x < 0 || visual.w <= 0 || (visual.x + visual.w) > width)
-					throw L"アイテムのX座標が無効です";
+					throw L"Invalid X-coordinate for item";
 
 				if (visual.y < 0 || visual.h <= 0 || (visual.y + visual.h) > height)
-					throw L"アイテムのY座標が無効です";
+					throw L"Invalid Y-coordinate for item";
 
 				auto dst_head = output->get();
 				auto src_head = output->get() + visual.y * width + visual.x;
@@ -270,7 +270,7 @@ namespace apn::image_export
 
 			if (result == -1)
 			{
-				hive.message_box(L"拡張子が無効です");
+				hive.message_box(L"Invalid file extension");
 
 				return FALSE;
 			}
@@ -292,7 +292,7 @@ namespace apn::image_export
 
 			if (status != S_OK)
 			{
-				hive.message_box(L"ファイルの保存に失敗しました");
+				hive.message_box(L"Failed to save file");
 
 				return FALSE;
 			}

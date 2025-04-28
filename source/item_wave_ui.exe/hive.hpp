@@ -8,7 +8,7 @@ namespace apn::item_wave::ui
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"item_wave_ui";
-		inline static constexpr auto c_display_name = L"アイテム波形のUI";
+		inline static constexpr auto c_display_name = L"Item Wave UI";
 
 		//
 		// このアドインのインスタンスハンドルです。

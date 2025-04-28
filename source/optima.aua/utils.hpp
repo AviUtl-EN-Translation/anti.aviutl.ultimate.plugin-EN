@@ -169,7 +169,7 @@ namespace apn::optima
 		//
 		BOOL is_animation_effect() const
 		{
-			return ::lstrcmpA(filter->name, "アニメーション効果") == 0;
+			return ::lstrcmpA(filter->name, "Animation effect") == 0;
 		}
 	};
 

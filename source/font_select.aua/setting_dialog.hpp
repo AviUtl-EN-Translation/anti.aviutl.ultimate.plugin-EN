@@ -34,21 +34,21 @@ namespace apn::font_select
 		}
 
 		//
-		// フォント選択用のカスタムメニューを表示します。
+		// Displays a custom menu for font selection.
 		//
 		BOOL on_context_menu(HWND combobox)
 		{
 			MY_TRACE_FUNC("{:#010x}", combobox);
 
-			// フォントコンボボックスではない場合は何もしません。
+			// If it is not a font combo box, do nothing.
 			if (combobox != magi.exin.get_font_combobox()) return FALSE;
 
 			//
-			// 指定されたキーが押されている場合はTRUEを返します。
+			// Returns TRUE if the specified key is pressed.
 			//
 			constexpr auto is_key_down = [](DWORD vk) { return ::GetKeyState(vk) < 0; };
 
-			// 修飾キーが押されている場合は何もしません。
+			// Do nothing if the modifier key is pressed.
 			if (is_key_down(VK_SHIFT) ||
 				is_key_down(VK_CONTROL) ||
 				is_key_down(VK_MENU) ||
@@ -58,7 +58,7 @@ namespace apn::font_select
 				return FALSE;
 			}
 
-			// まだフォントデータが読み込まれてない場合は
+			// If font data has not been read yet
 			if (hive.menu_root.nodes.empty())
 			{
 				auto fonts = create_font_collection(combobox);
@@ -66,18 +66,19 @@ namespace apn::font_select
 				text_reader.read();
 			}
 
-			// フォント選択用のカスタムメニューを作成します。
+
+			// Create a custom menu for font selection.
 			my::menu::unique_ptr<> menu(create_menu(hive.menu_root));
 
-			// メニューを表示します。
+			// Displays the menu.
 			auto point = my::get_cursor_pos();
 			auto id = ::TrackPopupMenuEx(menu.get(), TPM_NONOTIFY | TPM_RETURNCMD, point.x, point.y, hive.main_window, nullptr);
 			if (id == 0) return FALSE;
 
-			// 選択されたフォントをフォントのコンボボックスに適用します。
+			// Applies the selected font to the font combo box.
 			if (CB_ERR == ::SendMessageW(combobox, CB_SETCURSEL, id - 1, 0)) return FALSE;
 
-			// 選択フォントが変更されたことを設定ダイアログに通知します。
+			// Notifies the configuration dialog that the selected font has changed.
 			::SendMessageW(::GetParent(combobox), WM_COMMAND,
 				MAKEWPARAM(::GetDlgCtrlID(combobox), CBN_SELCHANGE), (LPARAM)combobox);
 
@@ -85,7 +86,7 @@ namespace apn::font_select
 		}
 
 		//
-		// ウィンドウプロシージャです。
+		// This is a window procedure.
 		//
 		virtual LRESULT on_wnd_proc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam) override
 		{
@@ -118,7 +119,8 @@ namespace apn::font_select
 			case WM_CONTEXTMENU:
 				{
 					// コンテキストメニューをハンドルします。
-					if (hive.use_context_menu) on_context_menu((HWND)wParam);
+				if (hive.use_context_menu) {
+					on_context_menu((HWND)wParam); }
 
 					break;
 				}

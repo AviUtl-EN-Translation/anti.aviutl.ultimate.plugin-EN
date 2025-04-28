@@ -88,9 +88,9 @@ namespace apn::item_wave
 		{
 			MY_TRACE_FUNC("");
 
-			init_combobox(IDC_WAVE_TYPE, _T("中央"), _T("下"), _T("上"));
-			init_combobox(IDC_UPDATE_MODE, _T("更新しない"), _T("更新する"), _T("再生中は更新しない"));
-			init_combobox(IDC_XOR_MODE, _T("通常"), _T("XOR"), _T("NotXOR"), _T("Not"));
+			init_combobox(IDC_WAVE_TYPE, _T("Center"), _T("Bottom"), _T("Top"));
+			init_combobox(IDC_UPDATE_MODE, _T("Do not update"), _T("Renew"), _T("Do not update during playback"));
+			init_combobox(IDC_XOR_MODE, _T("Default"), _T("XOR"), _T("NotXOR"), _T("Not"));
 
 			using namespace my::layout;
 
@@ -226,7 +226,7 @@ namespace apn::item_wave
 					}
 			case IDC_INCLUDE_FOLDER_DIR:
 				{
-					auto folder = pick_folder(*this, L"対象フォルダを選択", hive.include_folder);
+					auto folder = pick_folder(*this, L"Select include folder", hive.include_folder);
 					if (!folder.empty())
 					{
 						set_text(IDC_INCLUDE_FOLDER, folder);
@@ -237,7 +237,7 @@ namespace apn::item_wave
 				}
 			case IDC_EXCLUDE_FOLDER_DIR:
 				{
-					auto folder = pick_folder(*this, L"除外フォルダを選択", hive.exclude_folder);
+					auto folder = pick_folder(*this, L"Select exclude folder", hive.exclude_folder);
 					if (!folder.empty())
 					{
 						set_text(IDC_EXCLUDE_FOLDER, folder);

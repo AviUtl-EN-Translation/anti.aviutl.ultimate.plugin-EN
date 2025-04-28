@@ -72,9 +72,9 @@ namespace apn::output_check
 				Time sel_end(e + 1, fi);
 
 				text += std::format(
-					_T("注意 : 全体の長さが [{:02d}:{:02d}:{:05.2f}] のプロジェクトに対して\n")
-					_T("[{:02d}:{:02d}:{:05.2f}]～[{:02d}:{:02d}:{:05.2f}] の出力範囲が指定されています\n")
-					_T("この設定のままだとプロジェクトの一部分しか出力されません\n\n"),
+					_T("Note: The project has a total length of [{:02d}:{:02d}:{:05.2f}]\n")
+					_T("An output range of [{:02d}:{:02d}:{:05.2f}]–[{:02d}:{:02d}:{:05.2f}] is specified\n")
+					_T("With this setting, only a portion of the project will be exported\n\n"),
 					total.hour(), total.min(), total.sec(),
 					sel_start.hour(), sel_start.min(), sel_start.sec(),
 					sel_end.hour(), sel_end.min(), sel_end.sec());
@@ -125,10 +125,10 @@ namespace apn::output_check
 				Time item_time(item_end + 1, fi);
 
 				text += std::format(
-					_T("注意 : 最終フレーム位置と全アイテムの最終位置が一致しません\n")
-					_T("[{:02d}:{:02d}:{:05.2f}] (最終フレーム位置)\n")
-					_T("[{:02d}:{:02d}:{:05.2f}] (全アイテムの最終位置)\n")
-					_T("この設定のままだと尺余りが発生する可能性があります\n\n"),
+					_T("Note: The end frame position does not match the final position of all items\n")
+					_T("[{:02d}:{:02d}:{:05.2f}] (End frame position)\n")
+					_T("[{:02d}:{:02d}:{:05.2f}] (Final position of all items)\n")
+					_T("With this setting, leftover runtime may occur\n\n"),
 					frame_time.hour(), frame_time.min(), frame_time.sec(),
 					item_time.hour(), item_time.min(), item_time.sec());
 			}
@@ -151,16 +151,16 @@ namespace apn::output_check
 			if (framerate_config == 0) return FALSE;
 
 			{
-				auto label = "不明";
+				auto label = "unknown";
 
 				// framerate_configがインデックスとして使えそうなら項目名を取得します。
 				if (framerate_config >= 0 && framerate_config < framerate_fp->check_n)
 					label = framerate_fp->check_name[framerate_config];
 
 				text += std::format(
-					_T("注意 : [設定] > [フレームレートの変更]が\n")
-					_T("[{}]に設定されています\n")
-					_T("この設定のままだとフレームレートが低下した状態で出力されます\n\n"),
+					_T("Note: [Filter+] > [Change framerate] is set to\n")
+					_T("[{}]\n")
+					_T("With this setting, the output will have a reduced frame rate\n\n"),
 					my::ts(label));
 			}
 
@@ -218,7 +218,7 @@ namespace apn::output_check
 					{
 						// メッセージテキストを追加します。
 						text += std::format(
-							_T("シーン {}、レイヤー {}、フレーム {}\n"),
+							_T("Scene {}, Layer {}, Frame {}\n"),
 							object->scene_set, object->layer_set + 1, object->frame_begin);
 					}
 				}
@@ -228,7 +228,7 @@ namespace apn::output_check
 			if (text.empty()) return FALSE;
 
 			// メッセージテキストを結合してTRUEを返します。
-			this->text += _T("注意 : 空のテキストオブジェクトが存在します\n") + text + _T("\n");
+			this->text += _T("Note: Empty text objects exist.\n") + text + _T("\n");
 			return TRUE;
 		}
 
@@ -248,7 +248,7 @@ namespace apn::output_check
 			// textが空文字列ではない場合は、チェックに引っかかっています。
 			if (!text.empty())
 			{
-				text += _T("このまま出力を実行しますか？");
+				text += _T("Do you want to proceed with the export as is?\n");
 
 				// ユーザーが出力を拒否した場合はFALSEを返します。
 				if (IDNO == hive.message_box(text, nullptr, MB_YESNO | MB_ICONEXCLAMATION))

@@ -83,8 +83,8 @@ namespace apn::note
 
 					my::menu::unique_ptr<> menu(::CreatePopupMenu());
 
-					::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_sharing_note, L"共通ノートを表示");
-					::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_project_note, L"プロジェクトノートを表示");
+					::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_sharing_note, L"View Sharing Notes");
+					::AppendMenuW(menu.get(), MF_STRING, c_command_id.c_project_note, L"View Project Notes");
 
 					if (::IsWindowVisible(sharing_note)) ::CheckMenuItem(menu.get(), c_command_id.c_sharing_note, MF_CHECKED);
 					if (::IsWindowVisible(project_note)) ::CheckMenuItem(menu.get(), c_command_id.c_project_note, MF_CHECKED);

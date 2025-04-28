@@ -98,7 +98,7 @@ namespace apn::reboot::launcher
 				const auto& duty = agit.duties[i];
 
 				addin_dialog->set_text(IDC_LAUNCHER_COMMAND_0 + i,
-					duty.name.empty() ? my::format(_T("コマンド {}"), i) : duty.name);
+					duty.name.empty() ? my::format(_T("Command {}"), i) : duty.name);
 			}
 
 			return TRUE;
@@ -124,7 +124,7 @@ namespace apn::reboot::launcher
 			}
 			else
 			{
-				hive.message_box(_T("コマンドが指定されていません"));
+				hive.message_box(_T("Command not specified"));
 			}
 
 			return TRUE;

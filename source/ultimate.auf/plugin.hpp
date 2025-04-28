@@ -80,7 +80,7 @@ namespace apn
 					MY_TRACE_FUNC("Init, {:#010x}, {:#010x}", wParam, lParam);
 
 					// このウィンドウにカテゴリ名を設定します。
-					::SetProp(hwnd, _T("aviutl.plugin.category_name"), (HANDLE)L"アルティメット");
+					::SetProp(hwnd, _T("aviutl.plugin.category_name"), (HANDLE)L"Ultimate ");
 
 					result |= addin_manager.fire_window_init(hwnd, message, wParam, lParam, editp, fp);
 

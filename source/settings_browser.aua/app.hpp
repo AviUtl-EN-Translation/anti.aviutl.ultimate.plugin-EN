@@ -22,7 +22,7 @@ namespace apn::settings_browser
 			auto object_index = magi.exin.get_current_object_index();
 			if (object_index < 0)
 			{
-				message_box(L"アイテムを選択してください");
+				message_box(L"Please select an item");
 
 				return FALSE;
 			}
@@ -30,14 +30,14 @@ namespace apn::settings_browser
 			auto object = magi.exin.get_object(object_index);
 			if (!object)
 			{
-				message_box(L"アイテムが無効です");
+				message_box(L"Invalid item");
 
 				return FALSE;
 			}
 
 			if (!(object->flag & ExEdit::Object::Flag::Exist))
 			{
-				message_box(L"アイテムの状態が無効です");
+				message_box(L"Invalid Item State");
 
 				return FALSE;
 			}

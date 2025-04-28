@@ -31,7 +31,8 @@ namespace apn::exedit_tweaker
 			MY_TRACE_FUNC("");
 
 			if (!config_io.init()) return FALSE;
-			if (!config_io.read()) MY_TRACE("コンフィグの読み込みに失敗しました\n");
+			if (!config_io.read()) MY_TRACE(
+			);
 			if (!hook_manager.init()) return FALSE;
 
 			return TRUE;

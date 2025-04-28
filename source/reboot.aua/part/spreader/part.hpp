@@ -170,10 +170,10 @@ namespace apn::reboot::spreader
 			if (control_id != IDC_SPREADER_ENABLED) return FALSE;
 
 			constexpr LPCTSTR stretch_mode_texts[] = {
-				_T("伸縮せずに表示"),
-				_T("フィットして表示"),
-				_T("クロップして表示"),
-				_T("引き伸ばして表示"),
+				_T("Display without scaling"),
+				_T("Fit to display"),
+				_T("Crop to display"),
+				_T("Stretch to display"),
 			};
 
 			// ポップアップメニューのアイテムIDです。
@@ -190,11 +190,11 @@ namespace apn::reboot::spreader
 			my::menu::unique_ptr<> menu(::CreatePopupMenu());
 
 			// play_select_frameを表示を追加します。
-			::AppendMenu(menu.get(), MF_STRING, c_play_select_frame, _T("選択範囲を再生"));
+			::AppendMenu(menu.get(), MF_STRING, c_play_select_frame, _T("Play selection"));
 			if (agit.play_select_frame) ::CheckMenuItem(menu.get(), c_play_select_frame, MF_CHECKED);
 
 			// play_loopを表示を追加します。
-			::AppendMenu(menu.get(), MF_STRING, c_play_loop, _T("繰り返し"));
+			::AppendMenu(menu.get(), MF_STRING, c_play_loop, _T("Repetition"));
 			if (agit.play_loop) ::CheckMenuItem(menu.get(), c_play_loop, MF_CHECKED);
 
 			// セパレータを追加します。
@@ -210,22 +210,22 @@ namespace apn::reboot::spreader
 			::AppendMenu(menu.get(), MF_SEPARATOR, 0, nullptr);
 
 			// show_frameを表示を追加します。
-			::AppendMenu(menu.get(), MF_STRING, c_show_frame, _T("フレームを表示"));
+			::AppendMenu(menu.get(), MF_STRING, c_show_frame, _T("View frame"));
 			if (agit.show_frame) ::CheckMenuItem(menu.get(), c_show_frame, MF_CHECKED);
 
 			// show_timeを表示を追加します。
-			::AppendMenu(menu.get(), MF_STRING, c_show_time, _T("時間を表示"));
+			::AppendMenu(menu.get(), MF_STRING, c_show_time, _T("View time"));
 			if (agit.show_time) ::CheckMenuItem(menu.get(), c_show_time, MF_CHECKED);
 
 			// show_thumbnailを表示を追加します。
-			::AppendMenu(menu.get(), MF_STRING, c_show_thumbnail, _T("サムネイルを表示"));
+			::AppendMenu(menu.get(), MF_STRING, c_show_thumbnail, _T("View thumbnails"));
 			if (agit.show_thumbnail) ::CheckMenuItem(menu.get(), c_show_thumbnail, MF_CHECKED);
 
 			// セパレータを追加します。
 			::AppendMenu(menu.get(), MF_SEPARATOR, 0, nullptr);
 
 			// オプションダイアログを表示を追加します。
-			::AppendMenu(menu.get(), MF_STRING, c_show_option_dialog, _T("詳細オプション"));
+			::AppendMenu(menu.get(), MF_STRING, c_show_option_dialog, _T("Advanced Options"));
 
 			// ポップアップメニューを表示します。
 			auto id = ::TrackPopupMenuEx(menu.get(),

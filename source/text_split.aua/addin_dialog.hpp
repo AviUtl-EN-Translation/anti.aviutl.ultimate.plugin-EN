@@ -46,9 +46,9 @@ namespace apn::text_split
 		{
 			MY_TRACE_FUNC("");
 
-			init_combobox(IDC_SHIFT_MODE, _T("なし"), _T("オフセット"), _T("範囲"));
-			init_combobox(IDC_EACH_MODE, _T("文字"), _T("行"));
-			init_combobox(IDC_FIT_MODE, _T("なし"), _T("アイテムの幅"), _T("指定された幅"));
+			init_combobox(IDC_SHIFT_MODE, _T("None"), _T("Offset"), _T("Range"));
+			init_combobox(IDC_EACH_MODE, _T("Character"), _T("Line"));
+			init_combobox(IDC_FIT_MODE, _T("None"), _T("Item Width"), _T("Specified Width"));
 
 			using namespace my::layout;
 

@@ -8,7 +8,7 @@ namespace apn::text_drop
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"text_drop";
-		inline static constexpr auto c_display_name = L"テキストドロップ";
+		inline static constexpr auto c_display_name = L"Text drop";
 
 		inline static constexpr struct Mode {
 			inline static constexpr int32_t c_none = 0;

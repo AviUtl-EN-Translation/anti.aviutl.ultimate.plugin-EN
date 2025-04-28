@@ -32,7 +32,7 @@ namespace apn::local_web_app
 				CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
 				nullptr, nullptr, hive.instance, nullptr))
 			{
-				hive.message_box(L"ブラウザウィンドウの作成に失敗しました");
+				hive.message_box(L"Failed to create browser window");
 
 				return FALSE;
 			}

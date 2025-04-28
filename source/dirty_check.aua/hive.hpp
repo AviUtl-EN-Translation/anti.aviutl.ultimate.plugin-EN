@@ -8,7 +8,7 @@ namespace apn::dirty_check
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"dirty_check";
-		inline static constexpr auto c_display_name = L"終了確認";
+		inline static constexpr auto c_display_name = L"Dirty Check";
 
 		//
 		// このアドインのインスタンスハンドルです。

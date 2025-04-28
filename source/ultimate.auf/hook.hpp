@@ -37,7 +37,7 @@ namespace apn
 
 				if (auto addin = conflicts(file_name))
 				{
-					std::wcout << std::format(L"\033[31m" L"『{}』アドインと競合しているので『{}』プラグインは使用できません" L"\033[m",
+					std::wcout << std::format(L"\033[31m" L"The 『{}』 plugin is not available because it conflicts with the 『{}』 add-in" L"\033[m",
 						addin->display_name, std::filesystem::path(file_name).filename().wstring()) << std::endl;
 
 					return nullptr;
@@ -49,7 +49,7 @@ namespace apn
 
 				if (::StrStrIW(file_name.c_str(), L"exedit.auf"))
 				{
-					MY_TRACE("拡張編集が読み込まれたのでアドレスを取得します\n");
+					MY_TRACE("が読み込まれたのでアドレスを取得します\n");
 
 					// 拡張編集関連のアドレス情報を初期化します。
 					magi.exin.init();

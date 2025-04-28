@@ -32,7 +32,7 @@ namespace apn::filer_ui
 			MY_TRACE_FUNC("{}, {:#010x}", name, filer_window);
 
 			if (!__super::Create(IDD_FILER_DIALOG, AfxGetMainWnd()))
-				throw _T("ファイラダイアログの作成に失敗しました");
+				throw _T("Failed to create filer dialog");
 
 			// ウィンドウ名を設定します。
 			SetWindowText(name);
@@ -259,17 +259,17 @@ namespace apn::filer_ui
 
 			tooltip.Create(this, TTS_ALWAYSTIP | TTS_NOPREFIX);
 			tooltip.SetMaxTipWidth(INT_MAX);
-			add_tool(IDC_PREV_FOLDER, _T("前のフォルダに戻ります"));
-			add_tool(IDC_NEXT_FOLDER, _T("次のフォルダに進みます"));
-			add_tool(IDC_PARENT_FOLDER, _T("一つ上の階層へ移動します"));
-			add_tool(IDC_GET_FILE_NAME, _T("AviUtlのカレントアイテムからフォルダを取得します"));
-			add_tool(IDC_ADD_BOOKMARK, _T("現在のフォルダをブックマークに追加します"));
-			add_tool(IDC_REMOVE_BOOKMARK, _T("現在のフォルダをブックマークから削除します"));
-			add_tool(IDC_HAS_NAV_PANE, _T("ツリービューの表示/非表示を切り替えます"));
-			add_tool(IDC_SEARCH, _T("ファイルをフィルタリングするための文字列です"));
-			add_tool(IDC_FOLDER, _T("現在表示中のフォルダです")
-				_T("\n手動で変更した場合はエンターキーを押して確定してください")
-				_T("\nリストダウンするとブックマークから選択できます"));
+			add_tool(IDC_PREV_FOLDER, _T("Go back to the previous folder"));
+			add_tool(IDC_NEXT_FOLDER, _T("Move forward to the next folder"));
+			add_tool(IDC_PARENT_FOLDER, _T("Move up one level"));
+			add_tool(IDC_GET_FILE_NAME, _T("Get the folder from AviUtl's current item"));
+			add_tool(IDC_ADD_BOOKMARK, _T("Add the current folder to bookmarks"));
+			add_tool(IDC_REMOVE_BOOKMARK, _T("Remove the current folder from bookmarks"));
+			add_tool(IDC_HAS_NAV_PANE, _T("Toggle the tree view display"));
+			add_tool(IDC_SEARCH, _T("Text for filtering files"));
+			add_tool(IDC_FOLDER, _T("The folder currently being displayed")
+				_T("\nPress Enter after manually changing")
+				_T("\nSelect from bookmarks by dropdown"));
 
 			return TRUE;
 		}

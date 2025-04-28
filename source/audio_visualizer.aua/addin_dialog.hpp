@@ -195,7 +195,7 @@ namespace apn::audio_visualizer
 		{
 			MY_TRACE_FUNC("");
 
-			init_combobox(IDC_MODE, _T("無効"), _T("有効"), _T("有効(再生中以外)"));
+			init_combobox(IDC_MODE, _T("Disabled"), _T("Enabled"), _T("Enabled (Except During Playback)"));
 			::SendDlgItemMessage(*this, IDC_RANGE_MIN, UDM_SETRANGE32, -100, +100);
 			::SendDlgItemMessage(*this, IDC_RANGE_MAX, UDM_SETRANGE32, -100, +100);
 			::SendDlgItemMessage(*this, IDC_MARKER_BASE, UDM_SETRANGE32, -100, +100);

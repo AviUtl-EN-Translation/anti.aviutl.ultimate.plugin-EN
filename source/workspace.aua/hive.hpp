@@ -8,7 +8,7 @@ namespace apn::workspace
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"workspace";
-		inline static constexpr auto c_display_name = L"ワークスペース化";
+		inline static constexpr auto c_display_name = L"Work Space";
 
 		inline static constexpr struct MainMenuItemIndex {
 			inline static constexpr uint32_t c_file = 0;

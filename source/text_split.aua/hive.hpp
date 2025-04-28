@@ -8,7 +8,7 @@ namespace apn::text_split
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"text_split";
-		inline static constexpr auto c_display_name = L"テキスト分解";
+		inline static constexpr auto c_display_name = L"Text Split";
 
 		inline static constexpr struct ShiftMode {
 			inline static constexpr int32_t c_none = 0;

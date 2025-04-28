@@ -20,9 +20,9 @@ namespace apn::workspace::hook
 				auto window_name = my::get_window_text(hwnd);
 				MY_TRACE_STR(window_name);
 
-				if (window_name == _T("マイパレット"))
+				if (window_name == _T("My palette"))
 				{
-					// マイパレットダイアログ用のシャトルを作成します。
+					// Create a shuttle for the My Palette dialog.
 					auto shuttle = std::make_shared<Shuttle>();
 					shuttle->init(window_name, hwnd);
 				}
@@ -43,7 +43,7 @@ namespace apn::workspace::hook
 
 				if (show_cmd)
 				{
-					auto shuttle = shuttle_manager.get(L"マイパレット");
+					auto shuttle = shuttle_manager.get(L"My palette");
 					if (shuttle && *shuttle == hwnd)
 					{
 						MY_TRACE_INT(shuttle->is_docking());

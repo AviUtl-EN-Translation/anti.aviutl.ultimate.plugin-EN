@@ -85,7 +85,7 @@ namespace apn::workspace::hook::local
 
 				if (!movieplaymain)
 				{
-					auto shuttle = shuttle_manager.get(L"再生ウィンドウ");
+					auto shuttle = shuttle_manager.get(L"Playback window");
 					if (shuttle) hwnd = ::GetParent(*shuttle);
 				}
 
@@ -208,7 +208,7 @@ namespace apn::workspace::hook::local
 
 				if (!movieplaymain)
 				{
-					auto shuttle = shuttle_manager.get(L"再生ウィンドウ");
+					auto shuttle = shuttle_manager.get(L"Play window");
 					if (shuttle) hwnd = ::GetParent(*shuttle);
 				}
 

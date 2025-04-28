@@ -8,7 +8,7 @@ namespace apn::zoom_select
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"zoom_select";
-		inline static constexpr auto c_display_name = L"ズーム選択";
+		inline static constexpr auto c_display_name = L"Zoom Select";
 
 		inline static constexpr struct Zoom {
 			inline static constexpr int32_t c_min = 0;

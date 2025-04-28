@@ -68,12 +68,12 @@ public:
 			{
 				std::filesystem::create_directories(to.parent_path());
 
-				if (op == L"移動")
+				if (op == L"Move")
 				{
 					std::filesystem::copy(from, to, options);
 					std::filesystem::remove_all(from);
 				}
-				else if (op == L"コピー")
+				else if (op == L"Copy")
 				{
 					std::filesystem::copy(from, to, options);
 				}
@@ -101,7 +101,7 @@ public:
 
 				auto resource = ::BeginUpdateResource(dark_to.c_str(), FALSE);
 
-				// aviutl_dark.exeを外部マニフェスト形式にします。
+				// Make aviutl_dark.exe an external manifest format.
 				::UpdateResource(
 					resource,
 					RT_MANIFEST,
@@ -117,7 +117,7 @@ public:
 			catch (const std::exception& error)
 			{
 				AfxMessageBox(std::format(
-					L"マニフェストの作成に失敗しました" L"\n"
+					L"Failed to create manifest" L"\n"
 					L"{}",
 					my::ws(error.what())).c_str());
 			}
@@ -151,9 +151,9 @@ public:
 
 		CRect rc; reviews.GetClientRect(&rc);
 		reviews.SetExtendedStyle(reviews.GetExtendedStyle() | LVS_EX_CHECKBOXES | LVS_EX_FULLROWSELECT | LVS_EX_GRIDLINES);
-		reviews.InsertColumn(c_col.c_op, _T("処理"), LVCFMT_LEFT, 80);
-		reviews.InsertColumn(c_col.c_from, _T("変更前"), LVCFMT_LEFT, rc.Width() / 2);
-		reviews.InsertColumn(c_col.c_to, _T("変更後"), LVCFMT_LEFT, rc.Width());
+		reviews.InsertColumn(c_col.c_op, _T("Processing"), LVCFMT_LEFT, 80);
+		reviews.InsertColumn(c_col.c_from, _T("Before change"), LVCFMT_LEFT, rc.Width() / 2);
+		reviews.InsertColumn(c_col.c_to, _T("After change"), LVCFMT_LEFT, rc.Width());
 
 		auto review_index = 0;
 
@@ -164,7 +164,7 @@ public:
 
 			if (hive.uninstall_old_version)
 			{
-				auto op = std::wstring(L"移動");
+				auto op = std::wstring(L"Move");
 
 				read_child_nodes(root, "rename",
 					[&](const n_json& rename_node, size_t i)
@@ -198,7 +198,7 @@ public:
 					if (path.empty()) return TRUE;
 
 					auto from = hive.aviutl_dir / path;
-					auto to = hive.aviutl_dir / L"アンインストール済み" / path;
+					auto to = hive.aviutl_dir / L"Uninstalled" / path;
 
 					from = from.make_preferred();
 					to = to.make_preferred();
@@ -213,7 +213,7 @@ public:
 
 			if (hive.install_new_version)
 			{
-				auto op = std::wstring(L"コピー");
+				auto op = std::wstring(L"Copy");
 
 				read_child_nodes(root, "deploy",
 					[&](const n_json& deploy_node, size_t i)
@@ -242,7 +242,7 @@ public:
 
 			if (hive.deploy_runtime)
 			{
-				auto op = std::wstring(L"コピー");
+				auto op = std::wstring(L"Copy");
 				auto dir = hive.module_folder_name / L"runtime";
 
 				for (auto it : std::filesystem::directory_iterator(dir))
@@ -257,7 +257,7 @@ public:
 		catch (const std::exception& error)
 		{
 			AfxMessageBox(std::format(
-				L"{}を読込中にエラーが発生しました" L"\n"
+				L"Error loading {}" L"\n"
 				L"{}",
 				hive.spec_file_name,
 				my::ws(error.what())).c_str());

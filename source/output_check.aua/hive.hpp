@@ -8,7 +8,7 @@ namespace apn::output_check
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"output_check";
-		inline static constexpr auto c_display_name = L"出力確認";
+		inline static constexpr auto c_display_name = L"Output Check";
 
 		//
 		// このアドインのインスタンスハンドルです。

@@ -13,7 +13,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// 擔杮岅 (擔杮) resources
+// 老夯绢(老夯) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
 LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
@@ -55,10 +55,10 @@ STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | 
 EXSTYLE WS_EX_NOPARENTNOTIFY | WS_EX_CONTROLPARENT
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    CONTROL         "僄儞僐乕僪斖埻傪僠僃僢僋偡傞",IDC_CHECK_RANGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,0,144,16
-    CONTROL         "嵟廔僼儗乕儉傪僠僃僢僋偡傞",IDC_CHECK_LAST_FRAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,24,144,16
-    CONTROL         "[僼儗乕儉儗乕僩偺曄峏]傪僠僃僢僋偡傞",IDC_CHECK_FRAME_RATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,48,144,16
-    CONTROL         "嬻偺僥僉僗僩僆僽僕僃僋僩傪僠僃僢僋偡傞",IDC_CHECK_EMPTY_TEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,72,144,16
+    CONTROL         "Check encoding range",IDC_CHECK_RANGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,0,144,16
+    CONTROL         "Check final frame",IDC_CHECK_LAST_FRAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,24,144,16
+    CONTROL         "Check [Change frame rate]",IDC_CHECK_FRAME_RATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,48,144,16
+    CONTROL         "Check empty text objects",IDC_CHECK_EMPTY_TEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,72,144,16
 END
 
 
@@ -91,7 +91,7 @@ BEGIN
     0
 END
 
-#endif    // 擔杮岅 (擔杮) resources
+#endif    // 老夯绢(老夯) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

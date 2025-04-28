@@ -38,7 +38,7 @@ namespace apn::font_select
 			if (!setting_dialog.init()) return FALSE;
 			if (!addin_window.init()) return FALSE;
 
-			if (!config_io.read()) MY_TRACE("コンフィグの読み込みに失敗しました\n");
+			if (!config_io.read()) MY_TRACE("Failed to load config\n");
 
 			return FALSE;
 		}
@@ -61,7 +61,7 @@ namespace apn::font_select
 		}
 
 		//
-		// この仮想関数は、ウィンドウコマンドを実行するときに呼ばれます。
+		// This virtual function is called when executing a window command.
 		//
 		virtual BOOL on_window_command(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam, AviUtl::EditHandle* editp, AviUtl::FilterPlugin* fp) override
 		{
@@ -71,7 +71,7 @@ namespace apn::font_select
 				{
 					MY_TRACE_FUNC("magi.c_command_id.c_addin.c_command");
 
-					// アドインウィンドウを表示します。
+					// Displays an add-in window.
 					if (::IsWindow(addin_window)) addin_window.show();
 
 					break;

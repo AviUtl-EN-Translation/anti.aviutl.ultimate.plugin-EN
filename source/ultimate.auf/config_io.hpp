@@ -33,41 +33,41 @@ namespace apn
 
 			// アドイン情報を登録します。
 
-			register_addin(L"L", L"dark", L"ダークモード化", TRUE, L"", { L"DarkenWindow.aul" });
-			register_addin(L"L", L"workspace", L"ワークスペース化", TRUE, L"", { L"SplitWindow.aul" });
-			register_addin(L"L", L"filer", L"ファイラ", TRUE, L"", { L"ObjectExplorer.auf" });
-			register_addin(L"L", L"reboot", L"リブート", TRUE, L"", {});
-			register_addin(L"L", L"item_copy", L"アイテムコピー", TRUE, L"", {});
-			register_addin(L"L", L"item_wave", L"アイテム波形", TRUE, L"", { L"namecage.aua", L"NoScrollText.auf", L"ShowWaveform.auf" });
-			register_addin(L"L", L"audio_visualizer", L"音声視覚化", TRUE, L"", { L"LevelMeter.auf" });
-			register_addin(L"L", L"settings_browser", L"設定ブラウザ", TRUE, L"", {});
+			register_addin(L"L", L"dark", L"Dark Mode", TRUE, L"", { L"DarkenWindow.aul" });
+			register_addin(L"L", L"workspace", L"WorkSpace", TRUE, L"", { L"SplitWindow.aul" });
+			register_addin(L"L", L"filer", L"Filer", TRUE, L"", { L"ObjectExplorer.auf" });
+			register_addin(L"L", L"reboot", L"Reboot", TRUE, L"", {});
+			register_addin(L"L", L"item_copy", L"Item Copy", TRUE, L"", {});
+			register_addin(L"L", L"item_wave", L"Item Wave", TRUE, L"", { L"namecage.aua", L"NoScrollText.auf", L"ShowWaveform.auf" });
+			register_addin(L"L", L"audio_visualizer", L"Audio Visualizer", TRUE, L"", { L"LevelMeter.auf" });
+			register_addin(L"L", L"settings_browser", L"Settings Browser", TRUE, L"", {});
 
-			register_addin(L"M", L"filter_copy", L"フィルタコピー", TRUE, L"", { L"CopyFilter.auf" });
-			register_addin(L"M", L"filter_drag", L"フィルタドラッグ", TRUE, L"", { L"DragFilter.auf" });
-			register_addin(L"M", L"dirty_check", L"終了確認", TRUE, L"", { L"auls_confirmclose.auf", L"DirtyCheck.auf" });
-			register_addin(L"M", L"output_check", L"出力確認", TRUE, L"", { L"ConfigChecker.auf" });
-			register_addin(L"M", L"text_drop", L"テキストドロップ", TRUE, L"", {});
-			register_addin(L"M", L"text_split", L"テキスト分解", TRUE, L"", { L"SplitText.auf" });
-			register_addin(L"M", L"item_align", L"アイテム整列", TRUE, L"", { L"BuildStairs.auf" });
-			register_addin(L"M", L"image_export", L"画像エクスポート", TRUE, L"", { L"SaveImage.auf" });
-			register_addin(L"M", L"scene_select", L"シーン選択", TRUE, L"", { L"SelectScene.auf" });
-			register_addin(L"M", L"ease_select", L"イージング選択", TRUE, L"", { L"SelectEasing.auf" });
-			register_addin(L"M", L"zoom_select", L"ズーム選択", TRUE, L"", { L"SetZoom.auf" });
-			register_addin(L"M", L"font_tree", L"フォントツリー", TRUE, L"", { L"SelectFavoriteFont.auf" });
-			register_addin(L"M", L"font_preview", L"フォントプレビュー", TRUE, L"", {});
-			register_addin(L"M", L"font_select", L"フォント選択", TRUE, L"", {});
-			register_addin(L"M", L"note", L"メモ帳", TRUE, L"", {});
-			register_addin(L"M", L"clipboard_viewer", L"クリップボード画像表示", TRUE, L"", {});
-			register_addin(L"M", L"one_for_text", L"テキスト一括編集", TRUE, L"", {});
+			register_addin(L"M", L"filter_copy", L"Filter Copy", TRUE, L"", { L"CopyFilter.auf" });
+			register_addin(L"M", L"filter_drag", L"Filter Drag", TRUE, L"", { L"DragFilter.auf" });
+			register_addin(L"M", L"dirty_check", L"Dirty Check", TRUE, L"", { L"auls_confirmclose.auf", L"DirtyCheck.auf" });
+			register_addin(L"M", L"output_check", L"Output Check", TRUE, L"", { L"ConfigChecker.auf" });
+			register_addin(L"M", L"text_drop", L"Text Drop", TRUE, L"", {});
+			register_addin(L"M", L"text_split", L"Text Split", TRUE, L"", { L"SplitText.auf" });
+			register_addin(L"M", L"item_align", L"Item Align", TRUE, L"", { L"BuildStairs.auf" });
+			register_addin(L"M", L"image_export", L"Image Export", TRUE, L"", { L"SaveImage.auf" });
+			register_addin(L"M", L"scene_select", L"Scene Select", TRUE, L"", { L"SelectScene.auf" });
+			register_addin(L"M", L"ease_select", L"Easing Select", TRUE, L"", { L"SelectEasing.auf" });
+			register_addin(L"M", L"zoom_select", L"Zoom Select", TRUE, L"", { L"SetZoom.auf" });
+			register_addin(L"M", L"font_tree", L"Font Tree", TRUE, L"", { L"SelectFavoriteFont.auf" });
+			register_addin(L"M", L"font_preview", L"Font Preview", TRUE, L"", {});
+			register_addin(L"M", L"font_select", L"Font Select", TRUE, L"", {});
+			register_addin(L"M", L"note", L"Note", TRUE, L"", {});
+			register_addin(L"M", L"clipboard_viewer", L"Clipboard Viewer", TRUE, L"", {});
+			register_addin(L"M", L"one_for_text", L"Edit Text Batch", TRUE, L"", {});
 
-			register_addin(L"S", L"namecage", L"アイテム名常時表示", FALSE, L"", { L"NoScrollText.auf", L"ShowWaveform.auf" });
-			register_addin(L"S", L"last_frame", L"最終フレーム自動調整", TRUE, L"", { L"AdjustLastFrame.auf" });
-			register_addin(L"S", L"color_code", L"カラーコード追加", TRUE, L"", { L"AddColorCode.auf" });
-			register_addin(L"S", L"editbox_tweaker", L"エディットボックス微調整", TRUE, L"", { L"OptimizeEditBox.auf" });
-			register_addin(L"S", L"exedit_tweaker", L"拡張編集微調整", FALSE, L"", { L"ExEditTweaker.auf" });
-			register_addin(L"S", L"dialog_position", L"ダイアログ位置調整", TRUE, L"", { L"AdjustDialogPosition.auf" });
-			register_addin(L"S", L"dialog_size", L"ダイアログサイズ調整", TRUE, L"", { L"BigDialog.aul" });
-			register_addin(L"S", L"optima", L"最適化", TRUE, L"", { L"combobox_patch.auf" });
+			register_addin(L"S", L"namecage", L"Always Display Item Name", FALSE, L"", { L"NoScrollText.auf", L"ShowWaveform.auf" });
+			register_addin(L"S", L"last_frame", L"Audo-addjust Last Frame", TRUE, L"", { L"AdjustLastFrame.auf" });
+			register_addin(L"S", L"color_code", L"Color Code", TRUE, L"", { L"AddColorCode.auf" });
+			register_addin(L"S", L"editbox_tweaker", L"Editbox Tweaker", TRUE, L"", { L"OptimizeEditBox.auf" });
+			register_addin(L"S", L"exedit_tweaker", L"Exedit Tweaker", FALSE, L"", { L"ExEditTweaker.auf" });
+			register_addin(L"S", L"dialog_position", L"Dialog Position", TRUE, L"", { L"AdjustDialogPosition.auf" });
+			register_addin(L"S", L"dialog_size", L"Dialog Position", TRUE, L"", { L"BigDialog.aul" });
+			register_addin(L"S", L"optima", L"Optimization", TRUE, L"", { L"combobox_patch.auf" });
 
 			read_file(hive.config_file_name, hive);
 

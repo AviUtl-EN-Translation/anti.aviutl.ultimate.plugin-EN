@@ -246,7 +246,7 @@ namespace apn::workspace
 				else
 				{
 					// デフォルトのカテゴリに割り当てます。
-					category_name = L"セカンダリ";
+					category_name = L"Secondary";
 				}
 
 				// カテゴリ毎のサブメニューを取得します。
@@ -363,41 +363,41 @@ namespace apn::workspace
 			auto is_back = ht < 0 || ht >= c - 1;
 
 			append_separator();
-			append_menu(c_command_id.c_split_mode.c_none, _T("分割なし"));
-			append_menu(c_command_id.c_split_mode.c_vert, _T("左右に分割"));
-			append_menu(c_command_id.c_split_mode.c_horz, _T("上下に分割"));
+			append_menu(c_command_id.c_split_mode.c_none, _T("No Split"));
+			append_menu(c_command_id.c_split_mode.c_vert, _T("Split Vertically"));
+			append_menu(c_command_id.c_split_mode.c_horz, _T("Split Horizontally"));
 			switch (pane->split_mode) {
 			case hive.pane.c_split_mode.c_none: check_menu(c_command_id.c_split_mode.c_none); break;
 			case hive.pane.c_split_mode.c_vert: check_menu(c_command_id.c_split_mode.c_vert); break;
 			case hive.pane.c_split_mode.c_horz: check_menu(c_command_id.c_split_mode.c_horz); break;
 			}
 			append_separator();
-			append_menu(c_command_id.c_origin.c_top_left, _T("左上を原点にする"));
-			append_menu(c_command_id.c_origin.c_bottom_right, _T("右下を原点にする"));
+			append_menu(c_command_id.c_origin.c_top_left, _T("Set Origin to Top-Left"));
+			append_menu(c_command_id.c_origin.c_bottom_right, _T("Set Origin to Bottom-Right"));
 			switch (pane->origin) {
 			case hive.pane.c_origin.c_top_left: check_menu(c_command_id.c_origin.c_top_left); break;
 			case hive.pane.c_origin.c_bottom_right: check_menu(c_command_id.c_origin.c_bottom_right); break;
 			}
 			append_separator();
-			append_disable_menu(is_front, c_command_id.c_move_to_front, _T("先頭に移動する"));
-			append_disable_menu(is_back, c_command_id.c_move_to_back, _T("末尾に移動する"));
-			append_disable_menu(is_front, c_command_id.c_move_to_left, _T("左に移動する"));
-			append_disable_menu(is_back, c_command_id.c_move_to_right, _T("右に移動する"));
-			append_check_menu(pane->is_border_locked, c_command_id.c_is_border_locked, _T("ボーダーをロックする"));
-			// ペインのオーナーがサブウィンドウではない場合はこのメニューアイテムを無効化します。
-			append_disable_menu(!is_sub_window, c_command_id.c_rename_sub_window, _T("名前を変更"));
-			append_check_menu(root->is_solid, c_command_id.c_is_solid, _T("レイアウトを固定化"));
-			append_menu(c_command_id.c_pane_config, _T("ペインとタブの設定"));
+			append_disable_menu(is_front, c_command_id.c_move_to_front, _T("Move to Front"));
+			append_disable_menu(is_back, c_command_id.c_move_to_back, _T("Move to Back"));
+			append_disable_menu(is_front, c_command_id.c_move_to_left, _T("Move to Left"));
+			append_disable_menu(is_back, c_command_id.c_move_to_right, _T("Move to Right"));
+			append_check_menu(pane->is_border_locked, c_command_id.c_is_border_locked, _T("Lock Border"));
+			// Disable this menu item if the pane owner is not a sub-window.
+			append_disable_menu(!is_sub_window, c_command_id.c_rename_sub_window, _T("Rename"));
+			append_check_menu(root->is_solid, c_command_id.c_is_solid, _T("Fix Layout"));
+			append_menu(c_command_id.c_pane_config, _T("Pane and Tab Settings"));
 			// ドロワーの設定メニューを作成します。
 			my::menu::unique_ptr<> drawer_config_menu(::CreatePopupMenu());
-			::AppendMenu(menu.get(), MF_POPUP, (UINT_PTR)drawer_config_menu.get(), _T("ドロワーの設定"));
-			::AppendMenu(drawer_config_menu.get(), MF_STRING, c_command_id.c_drawer_config.c_top, _T("上側"));
-			::AppendMenu(drawer_config_menu.get(), MF_STRING, c_command_id.c_drawer_config.c_bottom, _T("下側"));
-			::AppendMenu(drawer_config_menu.get(), MF_STRING, c_command_id.c_drawer_config.c_left, _T("左側"));
-			::AppendMenu(drawer_config_menu.get(), MF_STRING, c_command_id.c_drawer_config.c_right, _T("右側"));
+			::AppendMenu(menu.get(), MF_POPUP, (UINT_PTR)drawer_config_menu.get(), _T("Drawer Settings"));
+			::AppendMenu(drawer_config_menu.get(), MF_STRING, c_command_id.c_drawer_config.c_top, _T("Top"));
+			::AppendMenu(drawer_config_menu.get(), MF_STRING, c_command_id.c_drawer_config.c_bottom, _T("Bottom"));
+			::AppendMenu(drawer_config_menu.get(), MF_STRING, c_command_id.c_drawer_config.c_left, _T("Left"));
+			::AppendMenu(drawer_config_menu.get(), MF_STRING, c_command_id.c_drawer_config.c_right, _T("Right"));
 			append_separator();
 			// ドッキングしているシャトルが存在しない場合はこのメニューアイテムを無効化します。
-			append_disable_menu(c == 0, c_command_id.c_undock, _T("ドッキングを解除"));
+			append_disable_menu(c == 0, c_command_id.c_undock, _T("Undocking"));
 
 			auto id = ::TrackPopupMenuEx(menu.get(),
 				TPM_NONOTIFY | TPM_RETURNCMD,
@@ -559,13 +559,13 @@ namespace apn::workspace
 			auto is_back = ht < 0 || ht >= c - 1;
 
 			append_separator();
-			append_disable_menu(is_front, c_command_id.c_move_to_front, _T("先頭に移動"));
-			append_disable_menu(is_back, c_command_id.c_move_to_back, _T("末尾に移動"));
-			append_disable_menu(is_front, c_command_id.c_move_to_left, _T("左に移動"));
-			append_disable_menu(is_back, c_command_id.c_move_to_right, _T("右に移動"));
-			append_disable_menu(ht < 0, c_command_id.c_undock, _T("削除"));
+			append_disable_menu(is_front, c_command_id.c_move_to_front, _T("Move to Front"));
+			append_disable_menu(is_back, c_command_id.c_move_to_back, _T("Move to Back"));
+			append_disable_menu(is_front, c_command_id.c_move_to_left, _T("Move to Left"));
+			append_disable_menu(is_back, c_command_id.c_move_to_right, _T("Move to Right"));
+			append_disable_menu(ht < 0, c_command_id.c_undock, _T("Delete"));
 			append_separator();
-			append_menu(c_command_id.c_drawer_config.c_begin + drawer_index, _T("ドロワーの設定"));
+			append_menu(c_command_id.c_drawer_config.c_begin + drawer_index, _T("Drawer Settings"));
 
 			auto id = ::TrackPopupMenuEx(menu.get(),
 				TPM_NONOTIFY | TPM_RETURNCMD,

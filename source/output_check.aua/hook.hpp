@@ -53,7 +53,7 @@ namespace apn::output_check
 			inline static BOOL __fastcall hook_proc(AviUtl::EditHandle* editp, uint32_t flags)
 			{
 				// 「編集RAMプレビュー」の場合はデフォルトの処理を行います。
-				if (flags == 0x10 && ::lstrcmpA(editp->sav_3.name, "編集RAMプレビュー") == 0)
+				if (flags == 0x10 && ::lstrcmpA(editp->sav_3.name, "Exedit RAM= Preview") == 0)
 					return orig_proc(editp, flags);
 
 				{

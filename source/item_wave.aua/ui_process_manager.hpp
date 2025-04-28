@@ -44,7 +44,7 @@ namespace apn::item_wave
 				&si,			// Pointer to STARTUPINFO structure
 				&pi))			// Pointer to PROCESS_INFORMATION structure
 			{
-				MY_TRACE("::CreateProcess()が失敗しました\n");
+				MY_TRACE("::CreateProcess() failed\n");
 
 				return FALSE;
 			}

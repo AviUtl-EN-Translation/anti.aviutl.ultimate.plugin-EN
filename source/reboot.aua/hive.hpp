@@ -8,7 +8,7 @@ namespace apn::reboot
 	inline struct Hive
 	{
 		inline static constexpr auto c_name = L"reboot";
-		inline static constexpr auto c_display_name = L"リブート";
+		inline static constexpr auto c_display_name = L"Reboot";
 
 		//
 		// このアドインのインスタンスハンドルです。

@@ -143,7 +143,7 @@ namespace apn::workspace
 				if (new_name != shuttle->name && shuttle_manager.get(new_name))
 				{
 					// メッセージボックスを表示して拒否します。
-					hive.message_box(_T("名前が重複しています"), *this);
+					hive.message_box(_T("Duplicate names"), *this);
 
 					return;
 				}
@@ -166,7 +166,7 @@ namespace apn::workspace
 			if (get(name))
 			{
 				// メッセージボックスを出して処理を中止します。
-				hive.message_box(std::format(L"ウィンドウ名が重複しています\nウィンドウ名 : {}", name), hive.main_window);
+				hive.message_box(std::format(L"Duplicate window names\nwindow name : {}", name), hive.main_window);
 
 				return FALSE;
 			}

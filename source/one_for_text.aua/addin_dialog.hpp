@@ -112,9 +112,9 @@ namespace apn::one_for_text
 				{
 					auto file_name = get_save_file_name(
 						*this,
-						L"保存先テキストファイルを選択",
-						L"テキストファイル (*.txt)\0*.txt\0"
-						L"すべてのファイル (*.*)\0*.*\0",
+						L"Select a destination text file",
+						L"Text Files (*.txt)\0*.txt\0"
+						L"All Files (*.*)\0*.*\0",
 						hive.text_file_name.c_str(),
 						L"txt");
 
@@ -131,9 +131,9 @@ namespace apn::one_for_text
 				{
 					auto file_name = get_open_file_name(
 						*this,
-						L"実行ファイルを選択",
-						L"実行ファイル (*.exe)\0*.exe\0"
-						L"すべてのファイル (*.*)\0*.*\0",
+						L"Select an executable file",
+						L"Executable Files (*.exe)\0*.exe\0"
+						L"All Files (*.*)\0*.*\0",
 						hive.text_editor_path.c_str());
 
 					if (file_name.length())
