@@ -8,7 +8,7 @@
 * All core functionality and source code are based on the original project.
 
 Original Plugin
-[Link to the original plugin](https://github.com/hebiiro/anti.aviutl.ultimate.plugin)
+* https://github.com/hebiiro/anti.aviutl.ultimate.plugin
 
 Localization
 * This version includes translations and adjustments for English-speaking users.
