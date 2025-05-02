@@ -1,44 +1,59 @@
-﻿# 🎉アルティメットプラグイン
+﻿# 🎉Ultimate Plug-in
 
-* [aviutl](https://spring-fragrance.mints.ne.jp/aviutl/)のプラグインです。
-* 保守の都合上、私が今まで作成したプラグインを一つにまとめています。
+* This is [aviutl](https://spring-fragrance.mints.ne.jp/aviutl/) Plug-in
+* For maintenance reasons, I am putting together the plug-ins that I have created so far.
 
-## 💡機能や使い方
+## 📄Notice
+* This plugin is an English-localized version of the original plugin developed by [蛇色 (へびいろ)](https://github.com/hebiiro).
+* All core functionality and source code are based on the original project.
 
-* [github.io](https://hebiiro.github.io/anti.aviutl.ultimate.plugin/)を参照してください。
+Original Plugin
+[Link to the original plugin](https://github.com/hebiiro/anti.aviutl.ultimate.plugin)
 
-## ⚗️動作確認
+Localization
+* This version includes translations and adjustments for English-speaking users.
+* All rights and credits for the original work belong to the original author.
 
-* (必須) aviutl 1.10 & 拡張編集 0.92 https://spring-fragrance.mints.ne.jp/aviutl/
-* (共存確認) patch.aul r43 謎さうなフォーク版65 https://scrapbox.io/nazosauna/patch.aul
+* If you are the original author and wish this localized version to be modified or removed, please feel free to contact me.
+* Redistributor - JangJe
+* Twitter - https://twitter.com/JJ_otomad
 
-## 💳クレジット
+## 💡Features and Usage
+
+* See [github.io](https://hebiiro.github.io/anti.aviutl.ultimate.plugin/).
+
+## ⚗️Confirmation of Operation
+
+* (Required) aviutl 1.10 & ExEdit 0.92 https://spring-fragrance.mints.ne.jp/aviutl/
+* (confirmation of coexistence) patch.aul r43 nazosauna's Fork Edition 65 https://scrapbox.io/nazosauna/patch.aul
+
+## 💳Credit
 
 * aviutl_exedit_sdk https://github.com/ePi5131/aviutl_exedit_sdk
 * Microsoft Research Detours Package https://github.com/microsoft/Detours
 * JSON for Modern C++ https://github.com/nlohmann/json
 * Python https://www.python.org/
 
-## 👽️作成者情報
+## 👽️Author Information
 
-* 作成者 - 蛇色 (へびいろ)
+* Author - 蛇色 (へびいろ)
 * GitHub - https://github.com/hebiiro
 * Twitter - https://x.com/io_hebiiro
 
-## 🚨免責事項
+## 🚨Disclaimer
 
-この作成物および同梱物を使用したことによって生じたすべての障害・損害・不具合等に関しては、私と私の関係者および私の所属するいかなる団体・組織とも、一切の責任を負いません。各自の責任においてご使用ください。
+I am not responsible for all obstacles, damages, defects, etc. caused by the use of this product and the inclusion of this product, nor for any organization or organization to which I belong. Please use it at your own risk.
 
-## 🚚再配布の許可
+## 🚚Allow Redistribution
 
-* この作成物は以下の条件を満たしていれば再配布が可能です。
-	* 法令を遵守する。
-		* 例えば、ウィルスなどを同梱することはできない。
-	* 再配布物であることを受け取り側が判別できるようにする。
-		* 例えば、zipファイル名を`〇〇(おすすめ設定済み).zip`のように変更する。
-	* 再配布者を明確に判別できるようにする。
-		* 例えば、`README.md`に`🚚再配布者`の項目を追加して再配布者名を明記する。
+* This creation can be redistributed if the following conditions are met.
+	* comply with laws and regulations.
+		* For example, viruses cannot be included in the package.
+	* To enable a receiving side to discriminate that the object is a redistributed object.
+		* For example, change the zip file name to `〇〇(recommended set).zip`.
+	* To clearly determine a redistributor.
+		* For example, add the item `🚚redistributor` to `README.md ` and specify the redistributor name.
 
-## ❓要望・不具合報告
+## ❓Request and defect report
 
-* [イシュー](https://github.com/hebiiro/anti.aviutl.ultimate.plugin/issues)を使用してください。
+* I don't know if the bug in english version is a problem in the original version, so I won't write the link to the original bug report
