@@ -20,11 +20,12 @@ Localization
 
 ## 💡Features and Usage
 
-* See [github.io](https://hebiiro.github.io/anti.aviutl.ultimate.plugin/).
+* See [here](https://github.com/AviUtl-EN-Translation/anti.aviutl.ultimate.plugin-EN/wiki).
 
 ## ⚗️Confirmation of Operation
 
 * (Required) aviutl 1.10 & ExEdit 0.92 https://spring-fragrance.mints.ne.jp/aviutl/
+	* **Except for the English version of the link ([WebCam's version](https://hapsung.tistory.com/24)), it may not work with any other version.**
 * (confirmation of coexistence) patch.aul r43 nazosauna's Fork Edition 65 https://scrapbox.io/nazosauna/patch.aul
 
 ## 💳Credit
