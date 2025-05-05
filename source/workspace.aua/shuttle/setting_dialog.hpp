@@ -98,9 +98,9 @@ namespace apn::workspace
 				{
 					MY_TRACE_FUNC("WM_SIZE, {:#010x}, {:#010x}", wParam, lParam);
 
-					// 「patch.aul」用の処理です。
-					// 設定ダイアログが高速描画されているときは
-					// 親ウィンドウ(コンテナ)を手動で再描画する必要があります。
+					// Action for patch.aul.
+					// When the configuration dialog is being drawn at high speed
+					// You must manually redraw the parent window (container).
 					my::invalidate(::GetParent(hwnd));
 
 					break;

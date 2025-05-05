@@ -17,7 +17,7 @@ namespace apn
 			case WM_NCCREATE:
 				{
 					// このウィンドウにカテゴリ名を設定します。
-					::SetProp(hwnd, _T("aviutl.plugin.category_name"), (HANDLE)L"アルティメット");
+					::SetProp(hwnd, _T("aviutl.plugin.category_name"), (HANDLE)L"Ultimate");
 
 					break;
 				}

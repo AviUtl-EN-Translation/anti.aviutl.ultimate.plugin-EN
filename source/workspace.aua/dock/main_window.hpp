@@ -587,7 +587,7 @@ namespace apn::workspace
 				{
 					MY_TRACE_FUNC("WM_ACTIVATE, {:#010x}, {:#010x}", wParam, lParam);
 
-					// 「patch.aul」用の処理です。
+					// Action for patch.aul.
 					if (LOWORD(wParam) == WA_INACTIVE)
 						::SendMessage(hive.aviutl_window, message, wParam, lParam);
 

@@ -92,7 +92,7 @@ namespace apn::font_tree
 		} SendMessageA;
 
 		//
-		// このクラスはpatch.aul内の関数をフックします。
+		// This class hooks functions in patch.aul.
 		//
 		inline static struct {
 			inline static LRESULT WINAPI hook_proc(HWND hwnd, ExEdit::Filter* filter, int32_t font_index, LPCSTR font_name)
