@@ -18,7 +18,7 @@ Localization
 * Redistributor - JangJe
 * Twitter - https://twitter.com/JJ_otomad
 
-## 💡Features and Usage
+## 💡HOW TO USE
 
 * See [here](https://github.com/AviUtl-EN-Translation/anti.aviutl.ultimate.plugin-EN/wiki).
 
